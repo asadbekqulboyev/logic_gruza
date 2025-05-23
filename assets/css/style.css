@@ -5,8 +5,38 @@
   box-sizing: border-box;
 }
 
+.footer {
+  padding: 22px 0 16px;
+  background: #e56e55;
+}
+.footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer a {
+  color: #fff;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+}
+.footer a.footer_subtitle {
+  font-weight: 400;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  margin-top: 37px;
+}
+
 body {
   background: #fff;
+  color: #727272;
+  font-family: "Golos Text";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .container {
@@ -15,4 +45,13 @@ body {
 }
 .container.sm {
   max-width: 1232px;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */
