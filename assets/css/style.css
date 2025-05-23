@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.container.sm {
+  max-width: 1232px;
+}/*# sourceMappingURL=style.css.map */
