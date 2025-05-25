@@ -6,13 +6,28 @@
     display: flex;
     justify-content: space-between;
   }
+  .header_logo {
+    @media (max-width: 1600px) {
+      max-width: 190px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+
   &_left {
     display: flex;
     gap: 100px;
+    @media (max-width: 1830px) {
+      gap: 30px;
+    }
     &_content {
       display: flex;
       gap: 13px;
       align-items: flex-start;
+      @media (max-width: 1600px) {
+        gap: 8px;
+      }
       .custom-select {
         position: relative;
 
@@ -102,6 +117,9 @@
     border-radius: 2px;
     background: #f6f6f6;
     padding: 4px;
+    @media (max-width: 1600px) {
+      gap: 8px;
+    }
     a {
       display: flex;
       height: 46px;
@@ -112,6 +130,9 @@
       color: #888;
       border-radius: 2px;
       transition: all 0.2s linear;
+      @media (max-width: 1600px) {
+        padding: 10px 15px;
+      }
       &.active {
         background: #fff;
         color: #e56e55;
