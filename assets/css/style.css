@@ -642,6 +642,27 @@
   display: flex;
   gap: 20px;
 }
+.order_bottom_paginations {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+  color: #e56e55;
+}
+.order_bottom_paginations select {
+  border: 0;
+  outline: 0;
+  color: #e56e55;
+}
+.order_bottom_paginations .pagination_links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+.order_bottom_paginations .pagination_links a {
+  line-height: 0;
+}
 
 .footer {
   padding: 22px 0 16px;

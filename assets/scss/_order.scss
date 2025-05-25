@@ -132,4 +132,25 @@
       }
     }
   }
+  &_bottom_paginations {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+    color: #e56e55;
+    select {
+      border: 0;
+      outline: 0;
+      color: #e56e55;
+    }
+    .pagination_links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      a {
+        line-height: 0;
+      }
+    }
+  }
 }
