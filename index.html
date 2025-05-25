@@ -10,9 +10,509 @@
     <div class="wrapper">
       <!-- header -->
       <header class="header">
-        <div class="container"></div>
+        <div class="container">
+          <div class="header_left">
+            <div class="header_left_content">
+              <a href="#">
+                <img src="assets/images/logo.svg" alt="" />
+              </a>
+              <div class="custom-select">
+                <div class="select-display" id="selectToggle">
+                  <img src="assets/images/location_icon.svg" alt="" />
+                  <span id="selectedText">Челябинская область</span>
+                  <span class="icon">
+                    <img src="assets/images/location_icon_down.svg" alt="" />
+                  </span>
+                </div>
+                <ul class="options-list" id="optionList">
+                  <li data-value="Московская область">Москва</li>
+                  <li data-value="Санкт-Петербург">Санкт-Петербург</li>
+                  <li data-value="Краснодарский край">Краснодар</li>
+                  <li data-value="Республика Татарстан">Татарстан</li>
+                  <li data-value="Башкортостан">Уфа</li>
+                  <li data-value="Челябинская область">Челябинск</li>
+                  <li data-value="Свердловская область">Екатеринбург</li>
+                  <li data-value="Новосибирская область">Новосибирск</li>
+                </ul>
+              </div>
+            </div>
+            <div class="header_menu">
+              <ul class="header_menu_lists">
+                <li><a href="#" class="active">Новая заявка</a></li>
+                <li><a href="#">Мои заявки</a></li>
+                <li><a href="#">Документы</a></li>
+                <li><a href="#">Личный счет</a></li>
+                <li><a href="#">Справочники</a></li>
+              </ul>
+              <!-- <div class="header_menu_btnlists">
+                <button class="btn active">Людям</button>
+                <button class="btn">Бизнесу</button>
+              </div> -->
+            </div>
+          </div>
+          <div class="header_right">
+            <a href="" class="header_msg">
+              <img src="assets/images/msg_icon.svg" alt="" />
+              <span class="msg_number"> 1 </span>
+            </a>
+            <div class="header_accaount">
+              <span class="header_accaount_name">ПГ</span>
+              <div class="header_accaount_right">
+                <a href="tel:79090999889" class="header_accaount_phone"
+                  >79090999889</a
+                >
+                <span class="header_accaount_role">Администратор</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </header>
-      <main></main>
+      <main class="main">
+        <div class="container sm">
+          <div class="form_section">
+            <div class="form_top">
+              <h2 class="main_title">Новая заявка</h2>
+              <p class="form_subtitle">
+                Здесь вы можете оформить заявку на перевозку груза и получить
+                предварительный расчет стоимости. Процесс максимально простой:
+                заполните данные о перевозке, отправьте заявку, и наш менеджер
+                быстро рассчитает стоимость и свяжется с вами.
+              </p>
+            </div>
+            <div class="form_inputs">
+              <input type="text" name="from" id="from" placeholder="Откуда" />
+              <img src="assets/images/from_to.svg" alt="" />
+              <input type="text" name="to" id="to" placeholder="Куда" />
+            </div>
+            <div class="tourfirm_tab">
+              <h3 class="component_title">*Выберите тип фуры</h3>
+              <div class="tourfirm_tab_btns">
+                <a href="#tab_content1" class="tourfirm_tab_btn active">
+                  <label class="tourfirm_tab_btn">
+                    <input
+                      type="radio"
+                      name="tourfirm_type_btn"
+                      value="Еврофура"
+                      checked
+                    />
+                    <span class="tourfirm_tab_btn_content"> Еврофура </span>
+                  </label>
+                </a>
+                <a href="#tab_content2" class="tourfirm_tab_btn">
+                  <label class="tourfirm_tab_btn">
+                    <input
+                      type="radio"
+                      name="tourfirm_type_btn"
+                      value="Прямая машина"
+                    />
+                    <span class="tourfirm_tab_btn_content">
+                      Прямая машина
+                    </span>
+                  </label>
+                </a>
+                <a href="#tab_content3" class="tourfirm_tab_btn">
+                  <label class="tourfirm_tab_btn">
+                    <input
+                      type="radio"
+                      name="tourfirm_type_btn"
+                      value="Сборный груз"
+                    />
+                    <span class="tourfirm_tab_btn_content"> Сборный груз </span>
+                  </label>
+                </a>
+                <a href="#tab_content4" class="tourfirm_tab_btn">
+                  <label class="tourfirm_tab_btn">
+                    <input
+                      type="radio"
+                      name="tourfirm_type_btn"
+                      value="Контейнер"
+                    />
+                    <span class="tourfirm_tab_btn_content"> Контейнер </span>
+                  </label>
+                </a>
+                <a href="#tab_content5" class="tourfirm_tab_btn">
+                  <label class="tourfirm_tab_btn">
+                    <input
+                      type="radio"
+                      name="tourfirm_type_btn"
+                      value="Негабарит"
+                    />
+                    <span class="tourfirm_tab_btn_content"> Негабарит </span>
+                  </label>
+                </a>
+              </div>
+              <div id="tab_content1" class="tourfirm_tab_content">
+                <div class="tourfirm_tabs_radio">
+                  <div class="component_title">
+                    *Выберите тип кузова
+                    <span class="info_icon" title="*Выберите тип кузова">
+                      <img src="assets/images/info_icon.svg" alt="" />
+                    </span>
+                  </div>
+
+                  <div class="tourfirm_tabs">
+                    <label>
+                      <input
+                        type="radio"
+                        name="tourfirm_type"
+                        value="Тент"
+                        checked
+                      />
+                      <div class="tourfirm_content">
+                        <img src="assets/images/tourfirm_1.png" alt="" />
+                        <h4 class="torufirm_title">Тент</h4>
+                      </div>
+                    </label>
+                    <label>
+                      <input type="radio" name="tourfirm_type" value="Фургон" />
+                      <div class="tourfirm_content">
+                        <img src="assets/images/tourfirm_2.png" alt="" />
+                        <h4 class="torufirm_title">Фургон</h4>
+                      </div>
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        name="tourfirm_type"
+                        value="Рефриджиратор"
+                      />
+                      <div class="tourfirm_content">
+                        <img src="assets/images/tourfirm_3.png" alt="" />
+                        <h4 class="torufirm_title">Рефриджиратор</h4>
+                      </div>
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        name="tourfirm_type"
+                        value="Изотерм"
+                      />
+                      <div class="tourfirm_content">
+                        <img src="assets/images/tourfirm_4.png" alt="" />
+                        <h4 class="torufirm_title">Изотерм</h4>
+                      </div>
+                    </label>
+                    <label>
+                      <input type="radio" name="tourfirm_type" value="Борт" />
+                      <div class="tourfirm_content">
+                        <img src="assets/images/tourfirm_5.png" alt="" />
+                        <h4 class="torufirm_title">Борт</h4>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="cargo_info_block">
+                  <h4 class="component_title">Информация о грузе</h4>
+                  <div class="cargo_info_inputs">
+                    <div class="cargo_info_input">
+                      <input
+                        type="text"
+                        id="cargo_name"
+                        placeholder="Название груза"
+                      />
+                      <div>Например: Мебель, Личный вещи</div>
+                    </div>
+                    <div class="cargo_info_input">
+                      <input
+                        type="number"
+                        id="cargo_weight"
+                        placeholder="Вес груза, кг"
+                        name="weight"
+                      />
+                    </div>
+                    <div class="cargo_info_input">
+                      <input
+                        type="number"
+                        id="cargo_volume"
+                        placeholder="Стоимость, ₽"
+                        name="sum"
+                      />
+                      <span class="info_icon" title="Стоимость">
+                        <img src="assets/images/info_icon.svg" alt="" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="tab_content2" class="tourfirm_tab_content">
+                <div class="tourfirm_tabs_radio">
+                  <div class="component_title">
+                    *Выберите тип кузова
+                    <span class="info_icon" title="*Выберите тип кузова">
+                      <img src="assets/images/info_icon.svg" alt="" />
+                    </span>
+                  </div>
+                  <div class="tourfirm_tabs_radios">
+                    <label class="tourfirm_tabs_radio">
+                      <span class="custom_radio">
+                        <input type="radio" name="radio_weight" />
+                        <span class="radio_dot"></span>
+                      </span>
+                      <span>2 000 кг (4-8 европаллет)</span>
+                    </label>
+                    <label class="tourfirm_tabs_radio">
+                      <span class="custom_radio">
+                        <input type="radio" name="radio_weight" />
+                        <span class="radio_dot"></span>
+                      </span>
+                      <span>3 000 кг (8-10 европаллет)</span>
+                    </label>
+                    <label class="tourfirm_tabs_radio">
+                      <span class="custom_radio">
+                        <input type="radio" name="radio_weight" />
+                        <span class="radio_dot"></span>
+                      </span>
+                      <span>5 000 кг (14-18 европаллет)</span>
+                    </label>
+                    <label class="tourfirm_tabs_radio">
+                      <span class="custom_radio">
+                        <input type="radio" name="radio_weight" />
+                        <span class="radio_dot"></span>
+                      </span>
+                      <span>10 000 кг (16-18 европаллет)</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="cargo_info_block">
+                  <h4 class="component_title">Информация о грузе</h4>
+                  <div class="cargo_info_inputs">
+                    <div class="cargo_info_input">
+                      <input
+                        type="text"
+                        id="cargo_name"
+                        placeholder="Название груза"
+                      />
+                      <div>Например: Мебель, Личный вещи</div>
+                    </div>
+                    <div class="cargo_info_input">
+                      <input
+                        type="number"
+                        id="cargo_weight"
+                        placeholder="Вес груза, кг"
+                        name="weight"
+                      />
+                    </div>
+                    <div class="cargo_info_input">
+                      <input
+                        type="number"
+                        id="cargo_volume"
+                        placeholder="Стоимость, ₽"
+                        name="sum"
+                      />
+                      <span class="info_icon" title="Стоимость">
+                        <img src="assets/images/info_icon.svg" alt="" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="tab_content3" class="tourfirm_tab_content">
+                <div class="component_text">
+                  Сборный груз – перевозка грузов разных клиентов в одном
+                  направлении. Вы платите только за фактически занимаемый объем.
+                </div>
+                <div class="cargo_calculation">
+                  <div class="cargo_calculation_top">
+                    <div class="component_title">
+                      Параметры груза
+                      <span class="info_icon" title="*Выберите тип кузова">
+                        <img src="assets/images/info_icon.svg" alt="" />
+                      </span>
+                    </div>
+                    <label class="cargo_calculation_header">
+                      <span class="switch">
+                        <input type="checkbox" />
+                        <span class="slider"></span>
+                      </span>
+                      <span>Рассчитать с точными габаритами</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="cargo_info_block">
+                  <h4 class="component_title">Информация о грузе</h4>
+                  <div class="cargo_info_inputs">
+                    <div class="cargo_info_input">
+                      <input
+                        type="text"
+                        id="cargo_name"
+                        placeholder="Название груза"
+                      />
+                      <div>Например: Мебель, Личный вещи</div>
+                    </div>
+                    <div class="cargo_info_input">
+                      <input
+                        type="number"
+                        id="cargo_weight"
+                        placeholder="Вес груза, кг"
+                        name="weight"
+                      />
+                    </div>
+                    <div class="cargo_info_input">
+                      <input
+                        type="number"
+                        id="cargo_volume"
+                        placeholder="Стоимость, ₽"
+                        name="sum"
+                      />
+                      <span class="info_icon" title="Стоимость">
+                        <img src="assets/images/info_icon.svg" alt="" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="services_checkbox_items">
+              <h4 class="component_title">Дополнительные услуги</h4>
+              <div class="services_items">
+                <label>
+                  <span class="checkbox_wrapper">
+                    <input
+                      type="checkbox"
+                      class="extra"
+                      value="Погрузка"
+                      name="check_service1"
+                    />
+                    <span class="custom_checkbox">
+                      <span class="checkmark"></span>
+                    </span>
+                  </span>
+                  <span>Погрузка</span>
+                </label>
+                <label>
+                  <span class="checkbox_wrapper">
+                    <input
+                      type="checkbox"
+                      class="extra"
+                      value="Разгрузка"
+                      name="check_service1"
+                    />
+                    <span class="custom_checkbox">
+                      <span class="checkmark"></span>
+                    </span>
+                  </span>
+                  <span>Разгрузка</span>
+                </label>
+
+                <label>
+                  <span class="checkbox_wrapper">
+                    <input type="checkbox" class="extra" value="Страхование" />
+                    <span class="custom_checkbox">
+                      <span class="checkmark"></span>
+                    </span>
+                  </span>
+                  <span>Страхование</span>
+                </label>
+              </div>
+            </div>
+            <div class="comment_block">
+              <h3 class="component_title">Особые требования к перевозке</h3>
+              <textarea
+                id="requirements"
+                placeholder="Температурный режим и т.д."
+                maxlength="200"
+              ></textarea>
+              <div class="comment_block_bottom">
+                <span
+                  >Особые требования к перевозке (температурный режим, хрупкость
+                  и т. д.)</span
+                >
+                <span class="counter">0/200</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar">
+            <h3 class="sidebar_title">Ваш расчет</h3>
+            <form action="#" class="sidebar_form">
+              <div class="sidebar_form_top">
+                <label>
+                  <input
+                    type="text"
+                    readonly
+                    placeholder="Откуда"
+                    name="from_region"
+                  />
+                </label>
+                <img src="assets/images/arrow.svg" alt="" />
+                <label>
+                  <input
+                    type="text"
+                    readonly
+                    placeholder="Куда"
+                    name="to_region"
+                  />
+                </label>
+              </div>
+              <div class="sidebar_form_content">
+                <label>
+                  <h5 class="input_title">Тип фуры</h5>
+                  <input
+                    type="text"
+                    name="tourfirm_type_copy"
+                    readonly
+                    placeholder="Еврофура"
+                  />
+                </label>
+                <label>
+                  <h5 class="input_title">Тип кузова</h5>
+                  <input
+                    type="text"
+                    name="tourfirm_car_copy"
+                    readonly
+                    placeholder="Фургон"
+                  />
+                </label>
+                <label>
+                  <h5 class="input_title">Вес</h5>
+                  <input
+                    type="text"
+                    name="weight_copy"
+                    readonly
+                    placeholder="4 т"
+                  />
+                </label>
+                <label>
+                  <h5 class="input_title">Объявл. стоимость</h5>
+                  <input
+                    type="text"
+                    name="advert_price_copy"
+                    readonly
+                    placeholder="3 000 000 ₽"
+                  />
+                </label>
+                <label>
+                  <h5 class="input_title">Cтоимость</h5>
+                  <input
+                    type="text"
+                    name="price_copy"
+                    readonly
+                    placeholder="139 000, 00 ₽"
+                  />
+                </label>
+                <label>
+                  <h5 class="input_title">Сроки перевозки</h5>
+                  <input
+                    type="text"
+                    name="price_copy"
+                    readonly
+                    placeholder="13 дней"
+                  />
+                </label>
+              </div>
+              <div class="sidebar_service">
+                <h5 class="input_title">Дополнительные услуги</h5>
+                <input type="text" readonly placeholder="Погрузка, разгрузка" />
+              </div>
+              <button class="btn" type="submit">Подтвердить</button>
+              <p class="sidebar_form_description">
+                После отправки на рассчет с вами свяжется наш менеджер для
+                уточнения условий
+              </p>
+            </form>
+          </div>
+        </div>
+      </main>
       <footer class="footer">
         <div class="container">
           <ul>
@@ -23,5 +523,148 @@
         </div>
       </footer>
     </div>
+    <!-- Register Modal -->
+    <div class="modal" id="register_modal">
+      <form class="modal_content">
+        <div class="close_btn" id="close_register">✕</div>
+        <h2 class="modal_title">Регистрация</h2>
+        <p class="modal_subtitle">
+          Введите адрес электронной почты и придумайте пароль
+        </p>
+        <input
+          type="text"
+          placeholder="Почта или телефон"
+          class="modal_input"
+          name="login_create"
+        />
+        <div class="password_field">
+          <input
+            type="password"
+            placeholder="Пароль"
+            class="modal_input password"
+            id="register_password"
+            name="password_create"
+          />
+          <span class="toggle_eye">
+            <img src="assets/images/eye.svg" alt="" />
+            <img src="assets/images/eye_close.svg" alt="" />
+          </span>
+        </div>
+        <button class="btn" type="disabled">Зарегистрироваться</button>
+        <div class="modal_links">
+          <a href="#" id="open_login">Войти</a>
+          <a href="#">Забыли пароль?</a>
+        </div>
+        <ul class="password_rules">
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 
+            24"
+              fill="none"
+            >
+              <path
+                d="M9 12L11 14L15 10M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                stroke="#E56E55"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+            ><span>Только латинские символы</span>
+          </li>
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 
+            24"
+              fill="none"
+            >
+              <path
+                d="M9 12L11 14L15 10M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                stroke="#E56E55"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+            ><span> Не менее 8 символов</span>
+          </li>
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 
+            24"
+              fill="none"
+            >
+              <path
+                d="M9 12L11 14L15 10M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                stroke="#E56E55"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+            ><span>1 цифру и 1 спецсимвол</span>
+          </li>
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 
+            24"
+              fill="none"
+            >
+              <path
+                d="M9 12L11 14L15 10M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                stroke="#E56E55"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+            ><span> 1 прописную и 1 строчную букву</span>
+          </li>
+        </ul>
+      </form>
+    </div>
+    <div class="modal" id="login_modal">
+      <form class="modal_content">
+        <div class="close_btn" id="close_register">✕</div>
+        <h2 class="modal_title">Вход в личный кабинет</h2>
+        <p class="modal_subtitle">
+          Ваш персональный инструмент для управления логистикой
+        </p>
+        <input
+          type="text"
+          placeholder="Почта или телефон"
+          class="modal_input"
+          name="login"
+        />
+        <div class="password_field">
+          <input
+            type="password"
+            placeholder="Пароль"
+            class="modal_input password"
+            id="register_password2"
+          />
+          <span class="toggle_eye">
+            <img src="assets/images/eye.svg" alt="" />
+            <img src="assets/images/eye_close.svg" alt="" />
+          </span>
+        </div>
+        <button class="btn" type="disabled">Зарегистрироваться</button>
+        <div class="modal_links">
+          <a href="#" class="register_oen">Регистрация</a>
+          <a href="#">Забыли пароль?</a>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="assets/js/pro.js"></script>
   </body>
 </html>
