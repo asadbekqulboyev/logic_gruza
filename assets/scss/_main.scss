@@ -123,31 +123,86 @@
       }
       .cargo_info_block {
         margin-top: 40px;
-        .cargo_info_inputs {
+      }
+      .cargo_info_inputs {
+        display: flex;
+        gap: 16px;
+        margin-top: 16px;
+        .cargo_info_input {
           display: flex;
-          gap: 16px;
-          margin-top: 16px;
-          .cargo_info_input {
+          flex-direction: column;
+          gap: 8px;
+          input {
             display: flex;
-            flex-direction: column;
-            gap: 8px;
-            input {
-              display: flex;
-              height: 54px;
-              padding: 10px 20px;
-              align-items: center;
-              gap: 12px;
-              align-self: stretch;
-              width: 100%;
-              border-radius: 2px;
-              border: 1px solid #e7e7e7;
-              background: #f6f6f6;
-              outline: none;
-            }
-            &:first-child {
-              flex: 2;
-            }
+            height: 54px;
+            padding: 10px 20px;
+            align-items: center;
+            gap: 12px;
+            align-self: stretch;
+            width: 100%;
+            border-radius: 2px;
+            border: 1px solid #e7e7e7;
+            background: #f6f6f6;
+            outline: none;
           }
+          &:first-child {
+            flex: 2;
+          }
+        }
+      }
+    }
+    .tourfirm_tab_content {
+      display: none;
+    }
+    #tab_content3 {
+      margin-top: 13px;
+      .cargo_calculation_items {
+        display: none;
+        .cargo_info_inputs {
+          &:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+          }
+        }
+      }
+      .cargo_info_inputs {
+        margin-top: 20px;
+      }
+      .cargo_info_input {
+        flex: 1;
+      }
+      .cargo_calculation_number {
+        display: flex;
+        width: 28px;
+        height: 54px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        background: #e56e55;
+        color: #fff;
+      }
+      .cargo_btn_lists {
+        display: flex;
+        gap: 16px;
+        a {
+          border-radius: 2px;
+          background: #e56e55;
+          display: flex;
+          padding: 8px 30px;
+          justify-content: center;
+          align-items: center;
+          gap: 12px;
+          color: #fff;
+          cursor: pointer;
+          width: fit-content;
+          margin-top: 20px;
+        }
+        a:last-child {
+          color: #e56e55;
+          border-radius: 2px;
+          border: 1px solid #e56e55;
+          background: #fff;
         }
       }
     }

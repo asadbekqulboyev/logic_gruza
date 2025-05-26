@@ -25,21 +25,23 @@
                   </span>
                 </div>
                 <ul class="options-list" id="optionList">
-                  <li data-value="Московская область">Москва</li>
+                  <li data-value="Московская ">Москва</li>
                   <li data-value="Санкт-Петербург">Санкт-Петербург</li>
                   <li data-value="Краснодарский край">Краснодар</li>
-                  <li data-value="Республика Татарстан">Татарстан</li>
+                  <li data-value="Республика ">Татарстан</li>
                   <li data-value="Башкортостан">Уфа</li>
-                  <li data-value="Челябинская область">Челябинск</li>
-                  <li data-value="Свердловская область">Екатеринбург</li>
-                  <li data-value="Новосибирская область">Новосибирск</li>
+                  <li data-value="Челябинская ">Челябинск</li>
+                  <li data-value="Свердловская ">Екатеринбург</li>
+                  <li data-value="Новосибирская ">Новосибирск</li>
                 </ul>
               </div>
             </div>
             <div class="header_menu">
               <ul class="header_menu_lists">
                 <li><a href="#" class="active">Новая заявка</a></li>
-                <li><a href="#">Мои заявки</a></li>
+                <li>
+                  <a href="/order.html">Мои заявки</a>
+                </li>
                 <li><a href="#">Документы</a></li>
                 <li><a href="#">Личный счет</a></li>
                 <li><a href="#">Справочники</a></li>
@@ -51,7 +53,7 @@
             </div>
           </div>
           <div class="header_right">
-            <a href="" class="header_msg">
+            <a href="#" class="header_msg">
               <img src="assets/images/msg_icon.svg" alt="" />
               <span class="msg_number"> 1 </span>
             </a>
@@ -65,6 +67,52 @@
               </div>
             </div>
           </div>
+          <div class="header_hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="header_mobile">
+          <div class="custom-select">
+            <div class="select-display" id="selectToggle">
+              <img src="assets/images/location_icon.svg" alt="" />
+              <span id="selectedText">Челябинская область</span>
+              <span class="icon">
+                <img src="assets/images/location_icon_down.svg" alt="" />
+              </span>
+            </div>
+            <ul class="options-list" id="optionList">
+              <li data-value="Московская ">Москва</li>
+              <li data-value="Санкт-Петербург">Санкт-Петербург</li>
+              <li data-value="Краснодарский край">Краснодар</li>
+              <li data-value="Республика ">Татарстан</li>
+              <li data-value="Башкортостан">Уфа</li>
+              <li data-value="Челябинская ">Челябинск</li>
+              <li data-value="Свердловская ">Екатеринбург</li>
+              <li data-value="Новосибирская ">Новосибирск</li>
+            </ul>
+          </div>
+          <div class="header_accaount">
+            <span class="header_accaount_name">ПГ</span>
+            <div class="header_accaount_right">
+              <a href="tel:79090999889" class="header_accaount_phone"
+                >79090999889</a
+              >
+            </div>
+          </div>
+          <ul class="mobile_menu_lists">
+            <li><a href="#">Новая заявка</a></li>
+            <li><a href="#">Мои заявки</a></li>
+            <li><a href="#">Документы</a></li>
+            <li><a href="#">Личный счет</a></li>
+            <li><a href="#">Справочники</a></li>
+          </ul>
+
+          <ul class="header_mobile_bottom">
+            <li><a href="#">Форма обратной связи</a></li>
+            <li><a href="#">Вопросы и ответы</a></li>
+          </ul>
         </div>
       </header>
       <main class="main">
@@ -149,7 +197,6 @@
                       <img src="assets/images/info_icon.svg" alt="" />
                     </span>
                   </div>
-
                   <div class="tourfirm_tabs">
                     <label>
                       <input
@@ -237,7 +284,7 @@
               <div id="tab_content2" class="tourfirm_tab_content">
                 <div class="tourfirm_tabs_radio">
                   <div class="component_title">
-                    *Выберите тип кузова
+                    *Выберите грузоподъемность и тип кузова
                     <span class="info_icon" title="*Выберите тип кузова">
                       <img src="assets/images/info_icon.svg" alt="" />
                     </span>
@@ -326,6 +373,69 @@
                       </span>
                       <span>Рассчитать с точными габаритами</span>
                     </label>
+                    <div class="cargo_calculation_items">
+                      <div class="cargo_info_inputs">
+                        <div class="cargo_calculation_number">1</div>
+                        <div class="cargo_info_input">
+                          <input
+                            type="text"
+                            id="cargo_name"
+                            placeholder="Габариты (ДхШхВ), м"
+                          />
+                        </div>
+                        <div class="cargo_info_input">
+                          <input
+                            type="number"
+                            placeholder="Объем, м3 "
+                            name="wolume_input"
+                          />
+                        </div>
+                        <div class="cargo_info_input">
+                          <input
+                            type="number"
+                            placeholder="Вес, кг"
+                            name="weight_input"
+                          />
+                        </div>
+                        <div class="cargo_info_input">
+                          <input
+                            type="number"
+                            placeholder="Количество мест"
+                            name="counter_input"
+                          />
+                        </div>
+                      </div>
+                      <div class="cargo_btn_lists">
+                        <a href="#" class="add_input_btn">
+                          <span>Добавить</span>
+                          <img src="assets/images/add_icon.svg" alt="" />
+                        </a>
+                        <a href="#" class="remove_input_btn"> Удалить </a>
+                      </div>
+                    </div>
+                    <div class="cargo_info_inputs last">
+                      <div class="cargo_info_input">
+                        <input
+                          type="text"
+                          id="cargo_name"
+                          placeholder="Габариты (ДхШхВ), м"
+                        />
+                      </div>
+                      <div class="cargo_info_input">
+                        <input
+                          type="number"
+                          placeholder="Вес груза, кг"
+                          name="weight"
+                        />
+                      </div>
+                      <div class="cargo_info_input">
+                        <input
+                          type="number"
+                          placeholder="Стоимость, ₽"
+                          name="sum"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="cargo_info_block">
@@ -339,20 +449,13 @@
                       />
                       <div>Например: Мебель, Личный вещи</div>
                     </div>
-                    <div class="cargo_info_input">
-                      <input
-                        type="number"
-                        id="cargo_weight"
-                        placeholder="Вес груза, кг"
-                        name="weight"
-                      />
-                    </div>
+
                     <div class="cargo_info_input">
                       <input
                         type="number"
                         id="cargo_volume"
-                        placeholder="Стоимость, ₽"
-                        name="sum"
+                        placeholder="Объявленная стоимость, ₽"
+                        name="cargo_sum"
                       />
                       <span class="info_icon" title="Стоимость">
                         <img src="assets/images/info_icon.svg" alt="" />
@@ -361,6 +464,8 @@
                   </div>
                 </div>
               </div>
+              <div id="tab_content4" class="tourfirm_tab_content"></div>
+              <div id="tab_content5" class="tourfirm_tab_content"></div>
             </div>
             <div class="services_checkbox_items">
               <h4 class="component_title">Дополнительные услуги</h4>
