@@ -586,6 +586,7 @@
 .main .form_section #tab_content4 .container_option {
   position: relative;
   display: block;
+  cursor: pointer;
 }
 .main .form_section #tab_content4 .container_option input[type=radio] {
   display: none;
