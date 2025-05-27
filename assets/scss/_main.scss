@@ -9,11 +9,106 @@
     }
   }
   .form_section {
+    .form_top_content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      a {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: #e56e55;
+        margin-bottom: 12px;
+        @media (max-width: 768px) {
+          font-size: 12px;
+          margin-bottom: 6px;
+          img {
+            width: 19px;
+          }
+        }
+      }
+    }
+    .form_subtitle {
+      margin-top: 16px;
+      @media (max-width: 768px) {
+        font-size: 12px;
+        line-height: 1.5;
+        margin-top: 8px;
+      }
+      &.first {
+        margin-top: 24px;
+        @media (max-width: 768px) {
+          margin-top: 8px;
+        }
+      }
+    }
     .form_inputs {
       margin-top: 40px;
       display: flex;
       align-items: center;
       gap: 8px;
+      @media (max-width: 768px) {
+        margin-top: 20px;
+      }
+      &.only_select {
+        @media (max-width: 768px) {
+          margin-top: 20px;
+        }
+        .select-wrapper {
+          width: calc(50% - 8px);
+          @media (max-width: 768px) {
+            width: 100%;
+          }
+        }
+      }
+      &.grid {
+        flex-wrap: wrap;
+        gap: 20px 16px;
+        .date_wrapper {
+          width: 100%;
+          border-radius: 2px;
+          border: 1px solid #e7e7e7;
+          background: #f6f6f6;
+          height: 54px;
+          padding: 10px 20px;
+          outline: none;
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          width: 24%;
+          @media (max-width: 768px) {
+            width: 100%;
+          }
+          input {
+            padding: 0;
+            height: auto;
+            border: none;
+            outline: none;
+            font-size: 16px;
+          }
+        }
+      }
+      .form_custom_item {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: calc(50% - 8px);
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+        .form_title {
+          margin-bottom: 10px;
+          color: #262626;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 24px;
+        }
+        .custom_check_input {
+          display: flex;
+          gap: 4px;
+        }
+      }
       @media (max-width: 768px) {
         flex-direction: column;
       }
@@ -26,7 +121,7 @@
         padding: 10px 20px;
         outline: none;
       }
-      img {
+      input[type="text"] ~ img {
         @media (max-width: 768px) {
           transform: rotate(90deg);
         }

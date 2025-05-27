@@ -84,6 +84,7 @@ $(document).ready(function () {
   $('input[name="cargo_sum"]').on("input", function () {
     $('input[name="advert_price_copy"]').val($(this).val() + " ₽");
   });
+  // tourfirm
   $(".tourfirm_tab_btns input[name='tourfirm_type_btn']").on(
     "change",
     function () {
@@ -235,4 +236,19 @@ $(document).ready(function () {
     $(this).toggleClass("active");
     $(".header_mobile").toggleClass("open");
   });
+  $("#loading_date").datepicker({
+    dateFormat: "dd.mm.yy", // yoki 'yy-mm-dd'
+    changeMonth: true,
+    changeYear: true,
+  });
+  $('input[type="tel"]').inputmask({
+    mask: "+7 (999) 999-99-99",
+    placeholder: "_",
+    showMaskOnHover: false,
+    showMaskOnFocus: true,
+  });
+  $(".date_wrapper").on("click", function () {
+    $("#loading_date").datepicker("show").focus();
+  });
+  
 });
