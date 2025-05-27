@@ -3,6 +3,10 @@
   .container {
     display: flex;
     gap: 16px;
+    @media (max-width: 992px) {
+      flex-direction: column;
+      gap: 30px;
+    }
   }
   .form_section {
     .form_inputs {
@@ -10,6 +14,9 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
       input {
         width: 100%;
         border-radius: 2px;
@@ -18,6 +25,11 @@
         height: 54px;
         padding: 10px 20px;
         outline: none;
+      }
+      img {
+        @media (max-width: 768px) {
+          transform: rotate(90deg);
+        }
       }
     }
     .tourfirm_tab {
@@ -30,6 +42,7 @@
         padding: 4px;
         width: fit-content;
         margin-top: 16px;
+        flex-wrap: wrap;
         & > .tourfirm_tab_btn {
           width: fit-content;
           flex: 0 0 auto;
@@ -78,8 +91,18 @@
         justify-content: space-between;
         gap: 12px;
         margin-top: 16px;
+        @media (max-width: 1120px) {
+          flex-wrap: wrap;
+          justify-content: flex-start;
+        }
         label {
           flex: 1;
+          @media (max-width: 1120px) {
+            flex: 0 0 auto;
+          }
+          @media (max-width: 768px) {
+            width: calc(50% - 8px);
+          }
           input {
             display: none;
           }
@@ -128,10 +151,22 @@
         display: flex;
         gap: 16px;
         margin-top: 16px;
+        @media (max-width: 1024px) {
+          flex-wrap: wrap;
+        }
+        @media (max-width: 556px) {
+          flex-direction: column;
+        }
         .cargo_info_input {
           display: flex;
           flex-direction: column;
           gap: 8px;
+          @media (max-width: 1024px) {
+            width: calc(50% - 8px);
+          }
+          @media (max-width: 556px) {
+            width: 100%;
+          }
           input {
             display: flex;
             height: 54px;
@@ -144,6 +179,7 @@
             border: 1px solid #e7e7e7;
             background: #f6f6f6;
             outline: none;
+            width: 100%;
           }
           &:first-child {
             flex: 2;
@@ -217,12 +253,18 @@
         gap: 16px;
         align-items: center;
         margin-top: 16px;
+        @media (max-width: 556px) {
+          flex-direction: column;
+        }
       }
 
       .container_option {
         position: relative;
         display: block;
         cursor: pointer;
+        @media (max-width: 556px) {
+          width: 100%;
+        }
       }
 
       .container_option input[type="radio"] {
@@ -280,8 +322,31 @@
         color: #fff;
       }
     }
-    #tab_content5{
-      
+    #tab_content5 {
+      .cargo_info_inputs {
+        flex-wrap: wrap;
+      }
+      .cargo_info_input {
+        width: 25%;
+
+        &:first-child {
+          width: 100%;
+          flex: 1 1 auto;
+          input {
+            width: 35%;
+            @media (max-width: 556px) {
+              width: 100%;
+            }
+          }
+        }
+      }
+      .cargo_info_input:nth-child(2),
+      .cargo_info_input:nth-child(3) {
+        width: calc(50% - 9px);
+        @media (max-width: 556px) {
+          width: 100%;
+        }
+      }
     }
     .services_checkbox_items {
       display: flex;
@@ -326,6 +391,12 @@
         span:last-child {
           color: #e56e55;
         }
+        @media (max-width: 556px) {
+          font-size: 12px;
+          gap: 8px;
+          align-items: flex-start;
+          line-height: normal;
+        }
       }
     }
     .cargo_calculation {
@@ -352,6 +423,14 @@
     box-shadow: 0px 6px 24.3px 0px rgba(178, 178, 178, 0.25);
     padding: 30px;
     height: fit-content;
+    position: sticky;
+    top: 20px;
+    @media (max-width: 992px) {
+      max-width: 100%;
+    }
+    @media (max-width: 556px) {
+      padding: 15px;
+    }
     .input_title {
       color: #727272;
       font-size: 16px;
@@ -418,6 +497,9 @@
       margin-top: 16px;
       label {
         width: 50%;
+        @media (max-width: 556px) {
+          width: 100%;
+        }
         input {
           color: #262626;
           font-size: 16px;
@@ -442,5 +524,39 @@
       margin-top: 20px;
       color: #b0b0b0;
     }
+  }
+  &.personal {
+    .filters {
+      margin-top: 16px !important;
+    }
+    .select-wrapper {
+      max-width: calc(25% - 8px);
+      flex: 1 1 auto;
+      @media (max-width: 768px) {
+        max-width: 100%;
+      }
+    }
+    .order_item {
+      @media (max-width: 768px) {
+        flex: 0 0 auto !important;
+      }
+      .order_item_name {
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
+      }
+    }
+    .order_table_item {
+      padding: 16px 20px !important;
+      @media (max-width: 768px) {
+        padding: 10px 15px !important;
+      }
+      .order_table_content {
+        align-items: flex-start;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 30px 0;
   }
 }

@@ -78,16 +78,26 @@ $(document).ready(function () {
   $('input[name="to"]').on("input", function () {
     $("input[name='to_region']").val($(this).val());
   });
+  $('input[name="sum"]').on("input", function () {
+    $('input[name="price_copy"]').val($(this).val() + " ₽");
+  });
+  $('input[name="cargo_sum"]').on("input", function () {
+    $('input[name="advert_price_copy"]').val($(this).val() + " ₽");
+  });
   $(".tourfirm_tab_btns input[name='tourfirm_type_btn']").on(
     "change",
     function () {
+      $('input[name="tourfirm_car_copy"]').val("");
+      $('input[name="price_copy"]').val("");
+      $('input[name="cargo_sum"]').val("");
+      $('input[name="advert_price_copy"]').val("");
       $('input[name="tourfirm_type_copy"]').val($(this).val());
     }
   );
   $(".tourfirm_tabs input[name='tourfirm_type']").on("change", function () {
     $('input[name="tourfirm_car_copy"]').val($(this).val());
   });
-  $('input[name="weight"]').on("input", function () {
+  $('input[name="weight"],input[name="weight"]').on("input", function () {
     const val = parseFloat($(this).val());
     if (!isNaN(val)) {
       if (val > 1000) {
@@ -120,7 +130,9 @@ $(document).ready(function () {
       if (selected) {
         $(".cargo_info_inputs.last").slideUp();
         $(".cargo_calculation_items").slideDown();
-      } else {
+      }
+      if (!selected) {
+        $(".cargo_info_inputs.last").slideDown();
         $(".cargo_calculation_items").slideUp();
       }
     }
@@ -169,24 +181,19 @@ $(document).ready(function () {
           <input type="number" placeholder="Вес, кг" name="weight_input${counter}">
         </div>
         <div class="cargo_info_input">
-                          <input
-                            type="number"
-                            placeholder="Количество мест"
-                            name="counter_input"
-                          />
-                        </div>
-      </div>
-    `);
+        <input type="number" placeholder="Количество мест" name="counter_input"/>
+        </div>
+      </div>`);
 
     $(".cargo_calculation_items .cargo_info_inputs").last().after(newBlock);
     updateBlocks();
   });
 
-  $(".cargo_info_inputs .remove_input_btn").on("click", function (e) {
+  $(".cargo_calculation_items .remove_input_btn").on("click", function (e) {
     e.preventDefault();
-    if ($(".cargo_info_inputs .cargo_info_inputs").length > 1) {
-      $(".cargo_info_inputs .cargo_info_inputs").last().remove();
-      counter = $(".cargo_info_inputs .cargo_info_inputs").length;
+    if ($(".cargo_calculation_items .cargo_info_inputs").length > 1) {
+      $(".cargo_calculation_items .cargo_info_inputs").last().remove();
+      counter = $(".cargo_calculation_items .cargo_info_inputs").length;
       updateBlocks();
     }
   });
@@ -222,5 +229,10 @@ $(document).ready(function () {
         $(targetId).fadeIn(200);
       });
     }
+  });
+  $(".header_hamburger").click(function () {
+    $("body").toggleClass("lock");
+    $(this).toggleClass("active");
+    $(".header_mobile").toggleClass("open");
   });
 });

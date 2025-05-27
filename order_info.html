@@ -46,10 +46,10 @@
                 <li><a href="#">Личный счет</a></li>
                 <li><a href="#">Справочники</a></li>
               </ul>
-              <!-- <div class="header_menu_btnlists">
+              <div class="header_menu_btnlists">
                 <button class="btn active">Людям</button>
                 <button class="btn">Бизнесу</button>
-              </div> -->
+              </div>
             </div>
           </div>
           <div class="header_right">
@@ -117,10 +117,21 @@
       </header>
       <main class="main">
         <div class="container sm">
-          <div class="order docs">
-            <h2 class="main_title">Документы</h2>
-
+          <div class="order">
+            <h2 class="main_title">Новая заявка</h2>
+            <div class="order_top">
+              <p class="order_description">
+                Все ваши заявки в одном месте: статус доставки, документы,
+                детали по каждому заказу. <br />
+                Управляйте процессом и отслеживайте груз в реальном времени.
+              </p>
+              <ul class="order_top_btns">
+                <li><a href="#" class="active">Активные</a></li>
+                <li><a href="#">Завершенные</a></li>
+              </ul>
+            </div>
             <div class="order_content">
+              <div class="component_title">Журнал</div>
               <div class="order_table">
                 <div class="filters">
                   <div class="select-wrapper">
@@ -171,13 +182,19 @@
                     />
                   </div>
                 </div>
-
                 <div class="order_table_items">
                   <div class="order_table_item">
+                    <div class="order_table_item_title">В обработке</div>
                     <div class="order_table_content">
                       <div class="order_content_left">
-                        <div class="order_item_id">12.03.2025</div>
-                        <a href="#" class="order_btn">Рассчитано</a>
+                        <div class="order_item">
+                          <div class="order_item_id">ID:123456</div>
+                          <div class="order_item_id">12.03.2025</div>
+                        </div>
+                        <div class="order_item">
+                          <div class="order_item_name">ТехСнабПроект</div>
+                          <div class="order_item_id">ИНН: 2310076543</div>
+                        </div>
                         <div class="order_item">
                           <div class="order_item_name">
                             Москва — Санкт-Петербург
@@ -185,20 +202,30 @@
                           <div class="order_item_id">Еврофура, фургон, 4 т</div>
                         </div>
                       </div>
-                      <div class="docs_content_btns">
-                        <span class="order_btn active">Счета</span>
-                        <span class="order_btn active">Упд</span>
-                        <span class="order_btn active">Акты</span>
-                        <span class="order_btn">Накладные</span>
-                        <span class="order_btn">Накладные</span>
+                      <div class="order_item_btn">
+                        <a href="#">Подробнее</a>
+                        <a href="#">
+                          <img
+                            class="img-thumbnail"
+                            src="assets/images/trash.svg"
+                            alt=""
+                          />
+                        </a>
                       </div>
                     </div>
                   </div>
                   <div class="order_table_item">
+                    <div class="order_table_item_title">В обработке</div>
                     <div class="order_table_content">
                       <div class="order_content_left">
-                        <div class="order_item_id">12.03.2025</div>
-                        <a href="#" class="order_btn">Рассчитано</a>
+                        <div class="order_item">
+                          <div class="order_item_id">ID:123456</div>
+                          <div class="order_item_id">12.03.2025</div>
+                        </div>
+                        <div class="order_item">
+                          <div class="order_item_name">ТехСнабПроект</div>
+                          <div class="order_item_id">ИНН: 2310076543</div>
+                        </div>
                         <div class="order_item">
                           <div class="order_item_name">
                             Москва — Санкт-Петербург
@@ -206,20 +233,30 @@
                           <div class="order_item_id">Еврофура, фургон, 4 т</div>
                         </div>
                       </div>
-                      <div class="docs_content_btns">
-                        <span class="order_btn active">Счета</span>
-                        <span class="order_btn">Упд</span>
-                        <span class="order_btn">Акты</span>
-                        <span class="order_btn">Накладные</span>
-                        <span class="order_btn">Накладные</span>
+                      <div class="order_item_btn">
+                        <a href="#">Подробнее</a>
+                        <a href="#">
+                          <img
+                            class="img-thumbnail"
+                            src="assets/images/trash.svg"
+                            alt=""
+                          />
+                        </a>
                       </div>
                     </div>
                   </div>
                   <div class="order_table_item">
+                    <div class="order_table_item_title">В обработке</div>
                     <div class="order_table_content">
                       <div class="order_content_left">
-                        <div class="order_item_id">12.03.2025</div>
-                        <a href="#" class="order_btn">Рассчитано</a>
+                        <div class="order_item">
+                          <div class="order_item_id">ID:123456</div>
+                          <div class="order_item_id">12.03.2025</div>
+                        </div>
+                        <div class="order_item">
+                          <div class="order_item_name">ТехСнабПроект</div>
+                          <div class="order_item_id">ИНН: 2310076543</div>
+                        </div>
                         <div class="order_item">
                           <div class="order_item_name">
                             Москва — Санкт-Петербург
@@ -227,20 +264,30 @@
                           <div class="order_item_id">Еврофура, фургон, 4 т</div>
                         </div>
                       </div>
-                      <div class="docs_content_btns">
-                        <span class="order_btn active">Счета</span>
-                        <span class="order_btn">Упд</span>
-                        <span class="order_btn">Акты</span>
-                        <span class="order_btn">Накладные</span>
-                        <span class="order_btn">Накладные</span>
+                      <div class="order_item_btn">
+                        <a href="#">Подробнее</a>
+                        <a href="#">
+                          <img
+                            class="img-thumbnail"
+                            src="assets/images/trash.svg"
+                            alt=""
+                          />
+                        </a>
                       </div>
                     </div>
                   </div>
                   <div class="order_table_item">
+                    <div class="order_table_item_title">В обработке</div>
                     <div class="order_table_content">
                       <div class="order_content_left">
-                        <div class="order_item_id">12.03.2025</div>
-                        <a href="#" class="order_btn">Рассчитано</a>
+                        <div class="order_item">
+                          <div class="order_item_id">ID:123456</div>
+                          <div class="order_item_id">12.03.2025</div>
+                        </div>
+                        <div class="order_item">
+                          <div class="order_item_name">ТехСнабПроект</div>
+                          <div class="order_item_id">ИНН: 2310076543</div>
+                        </div>
                         <div class="order_item">
                           <div class="order_item_name">
                             Москва — Санкт-Петербург
@@ -248,20 +295,30 @@
                           <div class="order_item_id">Еврофура, фургон, 4 т</div>
                         </div>
                       </div>
-                      <div class="docs_content_btns">
-                        <span class="order_btn active">Счета</span>
-                        <span class="order_btn">Упд</span>
-                        <span class="order_btn">Акты</span>
-                        <span class="order_btn">Накладные</span>
-                        <span class="order_btn">Накладные</span>
+                      <div class="order_item_btn">
+                        <a href="#">Подробнее</a>
+                        <a href="#">
+                          <img
+                            class="img-thumbnail"
+                            src="assets/images/trash.svg"
+                            alt=""
+                          />
+                        </a>
                       </div>
                     </div>
                   </div>
                   <div class="order_table_item">
+                    <div class="order_table_item_title">В обработке</div>
                     <div class="order_table_content">
                       <div class="order_content_left">
-                        <div class="order_item_id">12.03.2025</div>
-                        <a href="#" class="order_btn">Рассчитано</a>
+                        <div class="order_item">
+                          <div class="order_item_id">ID:123456</div>
+                          <div class="order_item_id">12.03.2025</div>
+                        </div>
+                        <div class="order_item">
+                          <div class="order_item_name">ТехСнабПроект</div>
+                          <div class="order_item_id">ИНН: 2310076543</div>
+                        </div>
                         <div class="order_item">
                           <div class="order_item_name">
                             Москва — Санкт-Петербург
@@ -269,20 +326,30 @@
                           <div class="order_item_id">Еврофура, фургон, 4 т</div>
                         </div>
                       </div>
-                      <div class="docs_content_btns">
-                        <span class="order_btn active">Счета</span>
-                        <span class="order_btn">Упд</span>
-                        <span class="order_btn">Акты</span>
-                        <span class="order_btn">Накладные</span>
-                        <span class="order_btn">Накладные</span>
+                      <div class="order_item_btn">
+                        <a href="#">Подробнее</a>
+                        <a href="#">
+                          <img
+                            class="img-thumbnail"
+                            src="assets/images/trash.svg"
+                            alt=""
+                          />
+                        </a>
                       </div>
                     </div>
                   </div>
                   <div class="order_table_item">
+                    <div class="order_table_item_title">В обработке</div>
                     <div class="order_table_content">
                       <div class="order_content_left">
-                        <div class="order_item_id">12.03.2025</div>
-                        <a href="#" class="order_btn">Рассчитано</a>
+                        <div class="order_item">
+                          <div class="order_item_id">ID:123456</div>
+                          <div class="order_item_id">12.03.2025</div>
+                        </div>
+                        <div class="order_item">
+                          <div class="order_item_name">ТехСнабПроект</div>
+                          <div class="order_item_id">ИНН: 2310076543</div>
+                        </div>
                         <div class="order_item">
                           <div class="order_item_name">
                             Москва — Санкт-Петербург
@@ -290,12 +357,15 @@
                           <div class="order_item_id">Еврофура, фургон, 4 т</div>
                         </div>
                       </div>
-                      <div class="docs_content_btns">
-                        <span class="order_btn active">Счета</span>
-                        <span class="order_btn">Упд</span>
-                        <span class="order_btn">Акты</span>
-                        <span class="order_btn">Накладные</span>
-                        <span class="order_btn">Накладные</span>
+                      <div class="order_item_btn">
+                        <a href="#">Подробнее</a>
+                        <a href="#">
+                          <img
+                            class="img-thumbnail"
+                            src="assets/images/trash.svg"
+                            alt=""
+                          />
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -304,11 +374,13 @@
             </div>
             <div class="order_bottom_paginations">
               <div class="pagination_select">
-                За
-                <select name="den_select" id="">
-                  <option value="10 дней">10 дней</option>
-                  <option value="20 дней">20 дней</option>
-                  <option value="30 дней">30 дней</option>
+                Показывать по
+                <select name="" id="">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
                 </select>
               </div>
               <div class="pagination_links">
