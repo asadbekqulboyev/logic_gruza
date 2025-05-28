@@ -202,10 +202,10 @@ $(document).ready(function () {
   // tab content
   $(".tourfirm_tab_content").fadeOut();
   $(".tourfirm_tab_content#tab_content1").fadeIn();
+
   $('input[name="tourfirm_type_btn"]').on("change", function () {
     const value = $(this).val();
     let targetId = "";
-
     switch (value) {
       case "Еврофура":
         targetId = "#tab_content1";
@@ -223,7 +223,6 @@ $(document).ready(function () {
         targetId = "#tab_content5";
         break;
     }
-
     // Agar tanlangan content hozir ko‘rsatilayotgan bo‘lsa, hech narsa qilmaymiz
     if (!$(targetId).is(":visible")) {
       $(".tourfirm_tab_content:visible").fadeOut(200, function () {
@@ -231,54 +230,89 @@ $(document).ready(function () {
       });
     }
   });
+  // header
   $(".header_hamburger").click(function () {
     $("body").toggleClass("lock");
     $(this).toggleClass("active");
     $(".header_mobile").toggleClass("open");
   });
-  $("#loading_date").datepicker({
-    dateFormat: "dd.mm.yy", // yoki 'yy-mm-dd'
-    changeMonth: true,
-    changeYear: true,
-  });
-  $('input[type="tel"]').inputmask({
-    mask: "+7 (999) 999-99-99",
-    placeholder: "_",
-    showMaskOnHover: false,
-    showMaskOnFocus: true,
-  });
+  // datepicker
+  if ($("#loading_date").length > 0) {
+    $("#loading_date").datepicker({
+      dateFormat: "dd.mm.yy", // yoki 'yy-mm-dd'
+      changeMonth: true,
+      changeYear: true,
+    });
+  }
+  // tel inputmask
+  if ($('input[type="tel"]').length > 0) {
+    $('input[type="tel"]').inputmask({
+      mask: "+7 (999) 999-99-99",
+      placeholder: "_",
+      showMaskOnHover: false,
+      showMaskOnFocus: true,
+    });
+  }
+  // datepicker parent
   $(".date_wrapper").on("click", function () {
     $("#loading_date").datepicker("show").focus();
   });
-  // 
+  // emali validate
   function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
-
+  // phone validate
   function isValidPhone(phone) {
     return /^\d{10,15}$/.test(phone);
   }
-
-  $('.sender_info_input').on('input', function () {
+  // input validate
+  $(".sender_info_input").on("input", function () {
     const $input = $(this);
     const value = $input.val().trim();
-    const $row = $input.closest('.sender_info_row');
-    const name = $input.attr('name');
-
+    const $row = $input.closest(".sender_info_row");
+    const name = $input.attr("name");
     let isValid = false;
-
-    if (name === 'sender_email') {
+    if (name === "sender_email") {
       isValid = isValidEmail(value);
-    } else if (name === 'sender_phone') {
+    } else if (name === "sender_phone") {
       isValid = isValidPhone(value);
-    } else if (name === 'sender_name') {
+    } else if (name === "sender_name") {
       isValid = value.length >= 2;
     }
-
     if (isValid) {
-      $row.addClass('valid');
+      $row.addClass("valid");
     } else {
-      $row.removeClass('valid');
+      $row.removeClass("valid");
     }
   });
+  // modal close
+  $(".close_btn").click(function (e) {
+    e.preventDefault();
+    $(this).closest(".modal").fadeOut();
+  });
+  // edit open
+  $(".edit_content .open_edit").click(function () {
+    $(this).next(".edit_btns").slideToggle();
+  });
+  // edit modal open
+  $(".edit_btns .edit").click(function () {
+    $(".edit_btns").fadeOut();
+    $(this).closest(".edit_btns").slideUp();
+    $(".modal#edit").fadeIn();
+  });
+  // modal exit
+  $(".otmen").click(function (e) {
+    e.preventDefault();
+    $(".modal").fadeOut();
+  });
+  // open modal add location
+  $(".add_adress").click(function (e) {
+    e.preventDefault();
+    $(".modal#add_adress").fadeIn();
+  });
+  // open delete
+  $('.edit_btn.delete').click(function (e) {
+    e.preventDefault();
+    $(".modal#delete").fadeIn();
+  })
 });

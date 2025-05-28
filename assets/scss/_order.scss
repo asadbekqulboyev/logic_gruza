@@ -57,6 +57,42 @@
       display: flex;
       gap: 16px;
       margin-top: 20px;
+      .header_menu_btnlists {
+        flex: 0 0 auto;
+      }
+      .search_input {
+        position: relative;
+        width: 100%;
+        img {
+          position: absolute;
+          left: 12px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 24px;
+          height: 24px;
+          z-index: 2;
+        }
+        input {
+          border-radius: 2px;
+          border: 1px solid #e7e7e7;
+          background: #f6f6f6;
+          width: 100%;
+          height: 54px;
+          padding: 8px 20px 8px 40px;
+          outline: none;
+        }
+      }
+      & > .btn {
+        width: 100%;
+        max-width: 281px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 30px;
+        @media (max-width: 768px) {
+          max-width: 100%;
+        }
+      }
       .select-wrapper {
         position: relative;
         width: 100%;
@@ -102,6 +138,47 @@
   &_table_item {
     padding: 16px 20px;
     border: 1px solid #e7e7e7;
+    .order_item.two {
+      border-left: 1px solid #b0b0b0;
+      padding-left: 6px;
+    }
+    .edit_content {
+      cursor: pointer;
+      padding: 5px;
+      position: relative;
+      .edit_btns {
+        border-radius: 2px;
+        background: #fff;
+        box-shadow: 0px 6px 24.3px 0px rgba(178, 178, 178, 0.25);
+        padding: 24px 30px;
+        position: absolute;
+        right: 0;
+        display: none;
+        @media (max-width: 971.5px) {
+          left: 0;
+          right: auto;
+        }
+        @media (max-width: 768px) {
+          padding: 14px 18px;
+        }
+        .edit_btn {
+          color: #e56e55;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 5px;
+          cursor: pointer;
+          transition: all 0.2s linear;
+          &:hover {
+            background: #fafafa;
+            border-radius: 2px;
+          }
+          &:nth-child(2) {
+            margin-top: 8px;
+          }
+        }
+      }
+    }
     &_title {
       color: #e56e55;
     }
@@ -139,6 +216,13 @@
         display: flex;
         gap: 20px;
       }
+    }
+    .order_item_title {
+      color: #262626;
+      font-weight: 600;
+    }
+    .order_item_text {
+      color: #262626;
     }
     .order_item_name {
       color: #262626;
@@ -190,8 +274,14 @@
     .order_table_content {
       margin-top: 0;
       gap: 14px;
+
       @media (max-width: 992px) {
         flex-wrap: wrap;
+      }
+      &.table_product {
+        @media (max-width: 768px) {
+          flex-direction: column;
+        }
       }
     }
     .order_content_left {
