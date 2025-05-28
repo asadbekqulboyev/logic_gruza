@@ -48,7 +48,7 @@
       align-items: center;
       gap: 8px;
       @media (max-width: 768px) {
-        margin-top: 20px;
+        margin-top: 24px;
       }
       &.only_select {
         @media (max-width: 768px) {
@@ -510,6 +510,19 @@
       }
     }
   }
+  .sidebar_lists {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    @media (max-width: 992px) {
+      max-width: 100%;
+    }
+    .sidebar {
+      position: static;
+    }
+  }
   .sidebar {
     width: 100%;
     max-width: 400px;
@@ -606,6 +619,10 @@
         }
       }
     }
+    .sidebar_btn_lists {
+      margin-top: 30px;
+      border-top: 1px solid #e7e7e7;
+    }
     .btn {
       width: 100%;
       display: flex;
@@ -614,6 +631,14 @@
       justify-content: center;
       align-items: center;
       margin-top: 20px;
+      &.no_bg {
+        background: #fff;
+        color: #e56e55;
+        border: 1px solid #e56e55;
+      }
+    }
+    &_text {
+      margin-top: 16px;
     }
     &_form_description {
       margin-top: 20px;
@@ -653,5 +678,157 @@
   }
   @media (max-width: 768px) {
     padding: 30px 0;
+  }
+  .form_caracteristics {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    &_content {
+      padding: 30px;
+      border-radius: 2px;
+      background: #fdf5f3;
+      .caracteristics_items {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        // gap: 16px;
+        margin-top: 30px;
+        .caracteristics_item {
+          width: calc(33.33% - 8px);
+          .caracteristics_item_title {
+            color: #727272;
+          }
+          p {
+            color: #262626;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  .sender_info {
+    max-width: 578px;
+    margin-top: 40px;
+    .component_title {
+      margin-bottom: 16px;
+    }
+    .sender_info_row {
+      position: relative;
+      margin-bottom: 12px;
+
+      .sender_info_input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      .sender_info_check {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        display: none;
+      }
+
+      &.valid .sender_info_input {
+        background-color: #fff5f5;
+      }
+
+      &.valid .sender_info_check {
+        display: block;
+      }
+    }
+
+    &_input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #eee;
+      border-radius: 4px;
+      font-size: 14px;
+      background-color: #f5f5f5;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &_check {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      display: none;
+    }
+  }
+  .details {
+    margin-top: 40px;
+    &_box {
+      margin-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px 16px;
+      flex-wrap: wrap;
+      background-color: #fdf5f3; // very light pink background
+      padding: 20px;
+      border-radius: 8px;
+      &_item {
+        width: calc(50% - 8px);
+      }
+    }
+
+    &_col {
+      flex: 1 1 45%;
+      min-width: 280px;
+    }
+
+    &_label {
+      font-size: 14px;
+      color: #727272;
+    }
+
+    &_text {
+      font-size: 16px;
+      font-weight: 600;
+      color: #262626;
+      strong {
+        font-weight: 600;
+      }
+    }
+  }
+  .documents {
+    margin-top: 40px;
+    &_list {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      max-width: 540px;
+    }
+    &_item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 12px 0px;
+      border-bottom: 1px solid #fbd5cd;
+    }
+    &_upload {
+      max-width: 340px;
+      border-radius: 2px;
+      border: 1px solid #e56e55;
+      background: #fff;
+      margin-top: 30px;
+      height: 54px;
+      padding: 8px 30px;
+      font-size: 16px;
+      color: #e56e55;
+    }
   }
 }

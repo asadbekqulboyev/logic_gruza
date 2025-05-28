@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Логика Груза</title>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- header -->
+      <header class="header">
+        <div class="container">
+          <div class="header_left">
+            <div class="header_left_content">
+              <a href="#" class="header_logo">
+                <img src="assets/images/logo.svg" alt="" />
+              </a>
+              <div class="custom-select">
+                <div class="select-display" id="selectToggle">
+                  <img src="assets/images/location_icon.svg" alt="" />
+                  <span id="selectedText">Челябинская область</span>
+                  <span class="icon">
+                    <img src="assets/images/location_icon_down.svg" alt="" />
+                  </span>
+                </div>
+                <ul class="options-list" id="optionList">
+                  <li data-value="Московская ">Москва</li>
+                  <li data-value="Санкт-Петербург">Санкт-Петербург</li>
+                  <li data-value="Краснодарский край">Краснодар</li>
+                  <li data-value="Республика ">Татарстан</li>
+                  <li data-value="Башкортостан">Уфа</li>
+                  <li data-value="Челябинская ">Челябинск</li>
+                  <li data-value="Свердловская ">Екатеринбург</li>
+                  <li data-value="Новосибирская ">Новосибирск</li>
+                </ul>
+              </div>
+            </div>
+            <div class="header_menu">
+              <ul class="header_menu_lists">
+                <li><a href="#" class="active">Новая заявка</a></li>
+                <li>
+                  <a href="/order.html">Мои заявки</a>
+                </li>
+                <li><a href="#">Документы</a></li>
+                <li><a href="#">Личный счет</a></li>
+                <li><a href="#">Справочники</a></li>
+              </ul>
+              <!-- <div class="header_menu_btnlists">
+                <button class="btn active">Людям</button>
+                <button class="btn">Бизнесу</button>
+              </div> -->
+            </div>
+          </div>
+          <div class="header_right">
+            <a href="#" class="header_msg">
+              <img src="assets/images/msg_icon.svg" alt="" />
+              <span class="msg_number"> 1 </span>
+            </a>
+            <div class="header_accaount">
+              <span class="header_accaount_name">ПГ</span>
+              <div class="header_accaount_right">
+                <a href="tel:79090999889" class="header_accaount_phone"
+                  >79090999889</a
+                >
+                <span class="header_accaount_role">Администратор</span>
+              </div>
+            </div>
+          </div>
+          <div class="header_hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="header_mobile">
+          <div class="custom-select">
+            <div class="select-display" id="selectToggle">
+              <img src="assets/images/location_icon.svg" alt="" />
+              <span id="selectedText">Челябинская область</span>
+              <span class="icon">
+                <img src="assets/images/location_icon_down.svg" alt="" />
+              </span>
+            </div>
+            <ul class="options-list" id="optionList">
+              <li data-value="Московская ">Москва</li>
+              <li data-value="Санкт-Петербург">Санкт-Петербург</li>
+              <li data-value="Краснодарский край">Краснодар</li>
+              <li data-value="Республика ">Татарстан</li>
+              <li data-value="Башкортостан">Уфа</li>
+              <li data-value="Челябинская ">Челябинск</li>
+              <li data-value="Свердловская ">Екатеринбург</li>
+              <li data-value="Новосибирская ">Новосибирск</li>
+            </ul>
+          </div>
+          <div class="header_accaount">
+            <span class="header_accaount_name">ПГ</span>
+            <div class="header_accaount_right">
+              <a href="tel:79090999889" class="header_accaount_phone"
+                >79090999889</a
+              >
+            </div>
+          </div>
+          <ul class="mobile_menu_lists">
+            <li><a href="#">Новая заявка</a></li>
+            <li><a href="#">Мои заявки</a></li>
+            <li><a href="#">Документы</a></li>
+            <li><a href="#">Личный счет</a></li>
+            <li><a href="#">Справочники</a></li>
+          </ul>
+
+          <ul class="header_mobile_bottom">
+            <li><a href="#">Форма обратной связи</a></li>
+            <li><a href="#">Вопросы и ответы</a></li>
+          </ul>
+        </div>
+      </header>
+      <main class="main">
+        <div class="container sm">
+          <div class="form_section">
+            <div class="form_top">
+              <div class="form_top_content">
+                <div class="form_top_content_left">
+                  <a href="#" class="breadcrumbs">
+                    <img src="assets/images/breadcrumbs_icon.svg" alt="" />
+                    <span>Назад</span>
+                  </a>
+                  <h2 class="main_title">ID:123456</h2>
+                </div>
+                <a href="#"
+                  ><span>Редактировать заявку</span
+                  ><img src="assets/images/edit_icon.svg" alt=""
+                /></a>
+              </div>
+              <p class="form_subtitle first">
+                Это заявка клиента с ключевой информацией о перевозке —
+                маршруте, типе транспорта, сроках, стоимости и контактах.
+              </p>
+            </div>
+            <div class="form_caracteristics">
+              <div class="component_title">Информация об отправлении</div>
+              <div class="form_caracteristics_content">
+                <div class="form_inputs">
+                  <div class="form_custom_item">
+                    <input
+                      name="from_fio"
+                      type="text"
+                      placeholder="Грузоотправитель (ФИО или компания)"
+                    />
+                  </div>
+                  <img src="assets/images/arrow.svg" alt="" />
+                  <div class="form_custom_item">
+                    <input
+                      name="to_fio"
+                      type="text"
+                      placeholder="Грузополучатель (ФИО или компания)"
+                    />
+                  </div>
+                </div>
+                <div class="caracteristics_items">
+                  <div class="caracteristics_item">
+                    <span class="caracteristics_item_title"> Тип фуры </span>
+                    <p>Еврофура</p>
+                  </div>
+                  <div class="caracteristics_item">
+                    <span class="caracteristics_item_title"> Тип кузова </span>
+                    <p>Фургон</p>
+                  </div>
+                  <div class="caracteristics_item">
+                    <span class="caracteristics_item_title">
+                      Дополнительные услуги
+                    </span>
+                    <p>Погрузка, разгрузка</p>
+                  </div>
+                  <div class="caracteristics_item">
+                    <span class="caracteristics_item_title"> Вес </span>
+                    <p>4 т</p>
+                  </div>
+                  <div class="caracteristics_item">
+                    <span class="caracteristics_item_title">
+                      Объявл. стоимость
+                    </span>
+                    <p>3 000 000 ₽</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="comment_block">
+              <h3 class="component_title">Особые требования к перевозке</h3>
+              <textarea
+                id="requirements"
+                placeholder="Температурный режим и т.д."
+                maxlength="200"
+              >
+там будет много хрупкого груза</textarea
+              >
+            </div>
+
+            <div class="sender_info">
+              <h2 class="component_title">Информация об отправителе</h2>
+
+              <div class="sender_info_row">
+                <input
+                  type="email"
+                  name="sender_email"
+                  placeholder="Email"
+                  class="sender_info_input"
+                />
+                <img
+                  src="assets/images/check_input.svg"
+                  alt="check"
+                  class="sender_info_check"
+                />
+              </div>
+
+              <div class="sender_info_row">
+                <input
+                  type="number"
+                  name="sender_phone"
+                  placeholder="Телефон"
+                  class="sender_info_input"
+                />
+                <img
+                  src="assets/images/check_input.svg"
+                  alt="check"
+                  class="sender_info_check"
+                />
+              </div>
+
+              <div class="sender_info_row">
+                <input
+                  type="text"
+                  name="sender_name"
+                  placeholder="Имя"
+                  class="sender_info_input"
+                />
+                <img
+                  src="assets/images/check_input.svg"
+                  alt="check"
+                  class="sender_info_check"
+                />
+              </div>
+            </div>
+
+            <div class="details">
+              <h4 class="component_title">Детали</h4>
+              <div class="details_box">
+                <div class="details_box_item">
+                  <p class="details_label">Адрес погрузки</p>
+                  <p class="details_text">
+                    <strong>г. Воронеж, ул. Плеханова, д. 12, офис 305</strong>
+                  </p>
+                </div>
+                <div class="details_box_item">
+                  <p class="details_label">Грузоотправитель</p>
+                  <p class="details_text">
+                    <strong>ООО «РегионСтрой»</strong>
+                  </p>
+                </div>
+                <div class="details_box_item">
+                  <p class="details_label">Телефон (отправитель):</p>
+                  <p class="details_text">
+                    <strong>+7 (903) 456-78-90</strong>
+                  </p>
+                </div>
+                <div class="details_box_item">
+                  <p class="details_label">Дата погрузки:</p>
+                  <p class="details_text"><strong>25.04.2025</strong></p>
+                </div>
+                <div class="details_box_item">
+                  <p class="details_label">Адрес выгрузки:</p>
+                  <p class="details_text">
+                    <strong>г. Уфа, ул. Менделеева, д. 895, кв. 14</strong>
+                  </p>
+                </div>
+                <div class="details_box_item">
+                  <p class="details_label">Грузополучатель:</p>
+                  <p class="details_text">
+                    <strong>ИП Сидорова Мария Викторовна</strong>
+                  </p>
+                </div>
+                <div class="details_box_item">
+                  <p class="details_label">Телефон (получатель):</p>
+                  <p class="details_text">
+                    <strong>+7 (917) 321-45-67</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="documents">
+              <div class="component_title">Документы</div>
+
+              <ul class="documents_list">
+                <li class="documents_item">
+                  <span class="documents_file"
+                    >nakladnaya_238-KR_240425.pdf - 1.2 MB</span
+                  >
+                  <a href="#" class="documents_delete">
+                    <img src="assets/images/trash.svg" alt="Удалить" />
+                  </a>
+                </li>
+                <li class="documents_item">
+                  <span class="documents_file"
+                    >nakladnaya_238-KR_240425.pdf - 1.2 MB</span
+                  >
+                  <a href="#" class="documents_delete">
+                    <img src="assets/images/trash.svg" alt="Удалить" />
+                  </a>
+                </li>
+                <li class="documents_item">
+                  <span class="documents_file"
+                    >nakladnaya_238-KR_240425.pdf - 1.2 MB</span
+                  >
+                  <a href="#" class="documents_delete">
+                    <img src="assets/images/trash.svg" alt="Удалить" />
+                  </a>
+                </li>
+                <li class="documents_item">
+                  <span class="documents_file"
+                    >nakladnaya_238-KR_240425.pdf - 1.2 MB</span
+                  >
+                  <a href="#" class="documents_delete">
+                    <img src="assets/images/trash.svg" alt="Удалить" />
+                  </a>
+                </li>
+                <li class="documents_item">
+                  <span class="documents_file"
+                    >nakladnaya_238-KR_240425.pdf - 1.2 MB</span
+                  >
+                  <a href="#" class="documents_delete">
+                    <img src="assets/images/trash.svg" alt="Удалить" />
+                  </a>
+                </li>
+              </ul>
+              <button class="documents_upload">Загрузить документы</button>
+            </div>
+          </div>
+          <div class="sidebar_lists">
+            <div class="sidebar">
+              <h3 class="sidebar_title">Ваши действия</h3>
+              <p class="sidebar_text">
+                Проверьте заполненные клиентом данные, прикрепите документы и
+                нажмите «Отправить груз». Это переведёт заявку в статус
+                «Подтверждена».
+              </p>
+
+              <form action="#" class="sidebar_form">
+                <div class="sidebar_btn_lists">
+                  <a href="#" class="btn no_bg">Загрузить документы</a>
+                  <a href="#" class="btn" type="submit">Подтвердить</a>
+                </div>
+              </form>
+            </div>
+            <div class="sidebar">
+              <h3 class="sidebar_title">Статус оплаты</h3>
+              <form action="#" class="sidebar_form">
+                <div class="sidebar_btn_lists">
+                  <a href="#" class="btn">Оплачено</a>
+                  <a href="#" class="btn no_bg">Не оплачено</a>
+                  <a href="#" class="btn no_bg">Частично оплачено</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <ul>
+            <li><a href="#">Форма обратной связи</a></li>
+            <li><a href="#">Вопросы и ответы</a></li>
+          </ul>
+          <a href="#" class="footer_subtitle"> Пользовательское соглашение </a>
+        </div>
+      </footer>
+    </div>
+    <!-- Register Modal -->
+    <div class="modal" id="register_modal">
+      <form class="modal_content">
+        <div class="close_btn" id="close_register">✕</div>
+        <h2 class="modal_title">Регистрация</h2>
+        <p class="modal_subtitle">
+          Введите адрес электронной почты и придумайте пароль
+        </p>
+        <input
+          type="text"
+          placeholder="Почта или телефон"
+          class="modal_input"
+          name="login_create"
+        />
+        <div class="password_field">
+          <input
+            type="password"
+            placeholder="Пароль"
+            class="modal_input password"
+            id="register_password"
+            name="password_create"
+          />
+          <span class="toggle_eye">
+            <img src="assets/images/eye.svg" alt="" />
+            <img src="assets/images/eye_close.svg" alt="" />
+          </span>
+        </div>
+        <button class="btn" type="disabled">Зарегистрироваться</button>
+        <div class="modal_links">
+          <a href="#" id="open_login">Войти</a>
+          <a href="#">Забыли пароль?</a>
+        </div>
+        <ul class="password_rules">
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 
+            24"
+              fill="none"
+            >
+              <path
+                d="M9 12L11 14L15 10M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                stroke="#E56E55"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+            ><span>Только латинские символы</span>
+          </li>
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 
+            24"
+              fill="none"
+            >
+              <path
+                d="M9 12L11 14L15 10M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                stroke="#E56E55"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+            ><span> Не менее 8 символов</span>
+          </li>
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 
+            24"
+              fill="none"
+            >
+              <path
+                d="M9 12L11 14L15 10M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                stroke="#E56E55"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+            ><span>1 цифру и 1 спецсимвол</span>
+          </li>
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 
+            24"
+              fill="none"
+            >
+              <path
+                d="M9 12L11 14L15 10M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                stroke="#E56E55"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+            ><span> 1 прописную и 1 строчную букву</span>
+          </li>
+        </ul>
+      </form>
+    </div>
+    <div class="modal" id="login_modal">
+      <form class="modal_content">
+        <div class="close_btn" id="close_register">✕</div>
+        <h2 class="modal_title">Вход в личный кабинет</h2>
+        <p class="modal_subtitle">
+          Ваш персональный инструмент для управления логистикой
+        </p>
+        <input
+          type="text"
+          placeholder="Почта или телефон"
+          class="modal_input"
+          name="login"
+        />
+        <div class="password_field">
+          <input
+            type="password"
+            placeholder="Пароль"
+            class="modal_input password"
+            id="register_password2"
+          />
+          <span class="toggle_eye">
+            <img src="assets/images/eye.svg" alt="" />
+            <img src="assets/images/eye_close.svg" alt="" />
+          </span>
+        </div>
+        <button class="btn" type="disabled">Зарегистрироваться</button>
+        <div class="modal_links">
+          <a href="#" class="register_oen">Регистрация</a>
+          <a href="#">Забыли пароль?</a>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
+
+    <script src="assets/js/pro.js"></script>
+  </body>
+</html>

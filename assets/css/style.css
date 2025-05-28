@@ -464,7 +464,7 @@
 }
 @media (max-width: 768px) {
   .main .form_section .form_inputs {
-    margin-top: 20px;
+    margin-top: 24px;
   }
 }
 @media (max-width: 768px) {
@@ -935,6 +935,21 @@
   margin-top: 16px;
   cursor: pointer;
 }
+.main .sidebar_lists {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media (max-width: 992px) {
+  .main .sidebar_lists {
+    max-width: 100%;
+  }
+}
+.main .sidebar_lists .sidebar {
+  position: static;
+}
 .main .sidebar {
   width: 100%;
   max-width: 400px;
@@ -1036,6 +1051,10 @@
   outline: 0;
   background: transparent;
 }
+.main .sidebar .sidebar_btn_lists {
+  margin-top: 30px;
+  border-top: 1px solid #e7e7e7;
+}
 .main .sidebar .btn {
   width: 100%;
   display: flex;
@@ -1044,6 +1063,14 @@
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+}
+.main .sidebar .btn.no_bg {
+  background: #fff;
+  color: #e56e55;
+  border: 1px solid #e56e55;
+}
+.main .sidebar_text {
+  margin-top: 16px;
 }
 .main .sidebar_form_description {
   margin-top: 20px;
@@ -1086,6 +1113,147 @@
   .main {
     padding: 30px 0;
   }
+}
+.main .form_caracteristics {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.main .form_caracteristics_content {
+  padding: 30px;
+  border-radius: 2px;
+  background: #fdf5f3;
+}
+.main .form_caracteristics_content .caracteristics_items {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-top: 30px;
+}
+.main .form_caracteristics_content .caracteristics_items .caracteristics_item {
+  width: calc(33.33% - 8px);
+}
+.main .form_caracteristics_content .caracteristics_items .caracteristics_item .caracteristics_item_title {
+  color: #727272;
+}
+.main .form_caracteristics_content .caracteristics_items .caracteristics_item p {
+  color: #262626;
+  font-weight: 600;
+}
+.main .sender_info {
+  max-width: 578px;
+  margin-top: 40px;
+}
+.main .sender_info .component_title {
+  margin-bottom: 16px;
+}
+.main .sender_info .sender_info_row {
+  position: relative;
+  margin-bottom: 12px;
+}
+.main .sender_info .sender_info_row .sender_info_input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.main .sender_info .sender_info_row .sender_info_check {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  display: none;
+}
+.main .sender_info .sender_info_row.valid .sender_info_input {
+  background-color: #fff5f5;
+}
+.main .sender_info .sender_info_row.valid .sender_info_check {
+  display: block;
+}
+.main .sender_info_input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #f5f5f5;
+}
+.main .sender_info_input:focus {
+  outline: none;
+}
+.main .sender_info_check {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  display: none;
+}
+.main .details {
+  margin-top: 40px;
+}
+.main .details_box {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px 16px;
+  flex-wrap: wrap;
+  background-color: #fdf5f3;
+  padding: 20px;
+  border-radius: 8px;
+}
+.main .details_box_item {
+  width: calc(50% - 8px);
+}
+.main .details_col {
+  flex: 1 1 45%;
+  min-width: 280px;
+}
+.main .details_label {
+  font-size: 14px;
+  color: #727272;
+}
+.main .details_text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #262626;
+}
+.main .details_text strong {
+  font-weight: 600;
+}
+.main .documents {
+  margin-top: 40px;
+}
+.main .documents_list {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 540px;
+}
+.main .documents_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 12px 0px;
+  border-bottom: 1px solid #fbd5cd;
+}
+.main .documents_upload {
+  max-width: 340px;
+  border-radius: 2px;
+  border: 1px solid #e56e55;
+  background: #fff;
+  margin-top: 30px;
+  height: 54px;
+  padding: 8px 30px;
+  font-size: 16px;
+  color: #e56e55;
 }
 
 .order {

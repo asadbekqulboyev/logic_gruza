@@ -250,5 +250,35 @@ $(document).ready(function () {
   $(".date_wrapper").on("click", function () {
     $("#loading_date").datepicker("show").focus();
   });
-  
+  // 
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function isValidPhone(phone) {
+    return /^\d{10,15}$/.test(phone);
+  }
+
+  $('.sender_info_input').on('input', function () {
+    const $input = $(this);
+    const value = $input.val().trim();
+    const $row = $input.closest('.sender_info_row');
+    const name = $input.attr('name');
+
+    let isValid = false;
+
+    if (name === 'sender_email') {
+      isValid = isValidEmail(value);
+    } else if (name === 'sender_phone') {
+      isValid = isValidPhone(value);
+    } else if (name === 'sender_name') {
+      isValid = value.length >= 2;
+    }
+
+    if (isValid) {
+      $row.addClass('valid');
+    } else {
+      $row.removeClass('valid');
+    }
+  });
 });
