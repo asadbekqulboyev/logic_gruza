@@ -211,6 +211,10 @@
       font-weight: 600;
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: #e7e7e7;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
     }
     &_phone {
       color: #262626;

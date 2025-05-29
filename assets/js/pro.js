@@ -263,7 +263,7 @@ $(document).ready(function () {
   }
   // phone validate
   function isValidPhone(phone) {
-    return /^\d{10,15}$/.test(phone);
+    return /^\d{9,15}$/.test(phone);
   }
   // input validate
   $(".sender_info_input").on("input", function () {
@@ -272,19 +272,22 @@ $(document).ready(function () {
     const $row = $input.closest(".sender_info_row");
     const name = $input.attr("name");
     let isValid = false;
+
     if (name === "sender_email") {
       isValid = isValidEmail(value);
     } else if (name === "sender_phone") {
       isValid = isValidPhone(value);
-    } else if (name === "sender_name") {
+    } else {
       isValid = value.length >= 2;
     }
+
     if (isValid) {
       $row.addClass("valid");
     } else {
       $row.removeClass("valid");
     }
   });
+
   // modal close
   $(".close_btn").click(function (e) {
     e.preventDefault();
@@ -311,8 +314,45 @@ $(document).ready(function () {
     $(".modal#add_adress").fadeIn();
   });
   // open delete
-  $('.edit_btn.delete').click(function (e) {
+  $(".edit_btn.delete").click(function (e) {
     e.preventDefault();
     $(".modal#delete").fadeIn();
-  })
+  });
+  // QUIZ
+  $(".quiz_item").fadeOut(0);
+  $(".quiz_item:first").fadeIn();
+
+  let currentStep = 0;
+
+  function showStep(index) {
+    const $items = $(".quiz_item");
+    const $buttons = $(".quiz_progress_btn");
+    const $dots = $(".progress_dots");
+
+    $items.removeClass("active").fadeOut(0);
+    $items.eq(index).fadeIn(200).addClass("active");
+    $buttons.eq(index).addClass("active");
+    $dots.eq(index).addClass("active");
+    // Tugma type ni tekshirish
+    const $btn = $(".profile_btn.next");
+    if (index === $items.length - 1) {
+      $btn.attr("type", "submit").text("Завершить");
+    } else {
+      $btn.attr("type", "button").text("Далее");
+    }
+  }
+
+  $(".profile_btn.next").on("click", function () {
+    const $items = $(".quiz_item");
+    if (currentStep < $items.length - 1) {
+      currentStep++;
+      showStep(currentStep);
+    }
+  });
+
+  // Forma submit
+  $("#quiz_form").on("submit", function (e) {
+    e.preventDefault();
+    // Yoki AJAX yuborish logikasi shu yerga yoziladi
+  });
 });

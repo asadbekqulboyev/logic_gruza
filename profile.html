@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Логика Груза</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- header -->
+      <header class="header">
+        <div class="container">
+          <div class="header_left">
+            <div class="header_left_content">
+              <a href="#" class="header_logo">
+                <img src="assets/images/logo.svg" alt="" />
+              </a>
+              <div class="custom-select">
+                <div class="select-display" id="selectToggle">
+                  <img src="assets/images/location_icon.svg" alt="" />
+                  <span id="selectedText">Челябинская область</span>
+                  <span class="icon">
+                    <img src="assets/images/location_icon_down.svg" alt="" />
+                  </span>
+                </div>
+                <ul class="options-list" id="optionList">
+                  <li data-value="Московская ">Москва</li>
+                  <li data-value="Санкт-Петербург">Санкт-Петербург</li>
+                  <li data-value="Краснодарский край">Краснодар</li>
+                  <li data-value="Республика ">Татарстан</li>
+                  <li data-value="Башкортостан">Уфа</li>
+                  <li data-value="Челябинская ">Челябинск</li>
+                  <li data-value="Свердловская ">Екатеринбург</li>
+                  <li data-value="Новосибирская ">Новосибирск</li>
+                </ul>
+              </div>
+            </div>
+            <div class="header_menu">
+              <ul class="header_menu_lists">
+                <li><a href="#" class="active">Новая заявка</a></li>
+                <li>
+                  <a href="/order.html">Мои заявки</a>
+                </li>
+                <li><a href="#">Документы</a></li>
+                <li><a href="#">Личный счет</a></li>
+                <li><a href="#">Справочники</a></li>
+              </ul>
+              <!-- <div class="header_menu_btnlists">
+                <button class="btn active">Людям</button>
+                <button class="btn">Бизнесу</button>
+              </div> -->
+            </div>
+          </div>
+          <div class="header_right">
+            <a href="#" class="header_msg">
+              <img src="assets/images/msg_icon.svg" alt="" />
+              <span class="msg_number"> 1 </span>
+            </a>
+            <div class="header_accaount">
+              <span class="header_accaount_name">ПГ</span>
+              <div class="header_accaount_right">
+                <a href="tel:79090999889" class="header_accaount_phone"
+                  >79090999889</a
+                >
+                <span class="header_accaount_role">Администратор</span>
+              </div>
+            </div>
+          </div>
+          <div class="header_hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="header_mobile">
+          <div class="custom-select">
+            <div class="select-display" id="selectToggle">
+              <img src="assets/images/location_icon.svg" alt="" />
+              <span id="selectedText">Челябинская область</span>
+              <span class="icon">
+                <img src="assets/images/location_icon_down.svg" alt="" />
+              </span>
+            </div>
+            <ul class="options-list" id="optionList">
+              <li data-value="Московская ">Москва</li>
+              <li data-value="Санкт-Петербург">Санкт-Петербург</li>
+              <li data-value="Краснодарский край">Краснодар</li>
+              <li data-value="Республика ">Татарстан</li>
+              <li data-value="Башкортостан">Уфа</li>
+              <li data-value="Челябинская ">Челябинск</li>
+              <li data-value="Свердловская ">Екатеринбург</li>
+              <li data-value="Новосибирская ">Новосибирск</li>
+            </ul>
+          </div>
+          <div class="header_accaount">
+            <span class="header_accaount_name">ПГ</span>
+            <div class="header_accaount_right">
+              <a href="tel:79090999889" class="header_accaount_phone"
+                >79090999889</a
+              >
+            </div>
+          </div>
+          <ul class="mobile_menu_lists">
+            <li><a href="#">Новая заявка</a></li>
+            <li><a href="#">Мои заявки</a></li>
+            <li><a href="#">Документы</a></li>
+            <li><a href="#">Личный счет</a></li>
+            <li><a href="#">Справочники</a></li>
+          </ul>
+
+          <ul class="header_mobile_bottom">
+            <li><a href="#">Форма обратной связи</a></li>
+            <li><a href="#">Вопросы и ответы</a></li>
+          </ul>
+        </div>
+      </header>
+      <main class="main profile">
+        <div class="container sm">
+          <h2 class="main_title">Справочники</h2>
+          <div class="profile_content">
+            <div class="profile_top">
+              <h2 class="component_title">Мои данные</h2>
+              <a href="" class="btn">Добавить компанию</a>
+            </div>
+            <div class="row">
+              <div class="profile_info">
+                <div class="profile_info_top">
+                  <div class="profile_info_left">
+                    <div class="logo">
+                      П
+                      <!-- <img src="assets/images/logo.svg" alt="" /> -->
+                    </div>
+                    <div class="profile_info_content">
+                      <div class="name">Петр Петров</div>
+                      <div class="role">Администратор</div>
+                    </div>
+                  </div>
+                  <label>
+                    <input type="file" name="file" />
+                    Настроить аватар
+                  </label>
+                </div>
+                <div class="sender_info">
+                  <div class="sender_info_row valid">
+                    <input
+                      type="email"
+                      name="sender_email"
+                      placeholder="Email"
+                      class="sender_info_input"
+                      value="gruz@mail.com"
+                    />
+                    <img
+                      src="assets/images/check_input.svg"
+                      alt="check"
+                      class="sender_info_check"
+                    />
+                  </div>
+
+                  <div class="sender_info_row valid">
+                    <input
+                      type="number"
+                      name="sender_phone"
+                      placeholder="Телефон"
+                      class="sender_info_input"
+                      value="79633083089"
+                    />
+                    <img
+                      src="assets/images/check_input.svg"
+                      alt="check"
+                      class="sender_info_check"
+                    />
+                  </div>
+                  <div class="sender_info_row">
+                    <input
+                      type="text"
+                      name="sender_name"
+                      placeholder="Имя"
+                      class="sender_info_input"
+                    />
+                    <img
+                      src="assets/images/check_input.svg"
+                      alt="check"
+                      class="sender_info_check"
+                    />
+                  </div>
+                  <div class="sender_info_row">
+                    <input
+                      type="text"
+                      name="job_title"
+                      placeholder="Должность"
+                      class="sender_info_input"
+                    />
+                    <img
+                      src="assets/images/check_input.svg"
+                      alt="check"
+                      class="sender_info_check"
+                    />
+                  </div>
+                </div>
+                <div class="profile_bottom">
+                  <a href="#" class="profile_btn save">Сохранить</a>
+                </div>
+              </div>
+              <div class="profile_info quiz">
+                <h2 class="component_title">Добавление новой компании</h2>
+                <div class="quiz_progress">
+                  <div class="quiz_progress_btn active">
+                    <img src="assets/images/check_input.svg" alt="" />
+                    <span>Шаг 1</span>
+                  </div>
+                  <div class="progress_dots"></div>
+
+                  <div class="quiz_progress_btn">
+                    <img src="assets/images/check_input.svg" alt="" />
+                    <span>Шаг 2</span>
+                  </div>
+                  <div class="progress_dots"></div>
+
+                  <div class="quiz_progress_btn">
+                    <img src="assets/images/check_input.svg" alt="" />
+                    <span>Шаг 3</span>
+                  </div>
+                </div>
+                <div class="quiz_item">
+                  <div class="sender_info">
+                    <div class="sender_info_row">
+                      <input
+                        type="text"
+                        name="quiz_job_title"
+                        placeholder="Название"
+                        class="sender_info_input"
+                      />
+                      <img
+                        src="assets/images/check_input.svg"
+                        alt="check"
+                        class="sender_info_check"
+                      />
+                    </div>
+
+                    <div class="sender_info_row">
+                      <input
+                        type="number"
+                        name="sender_inn"
+                        placeholder="ИНН"
+                        class="sender_info_input"
+                      />
+                      <img
+                        src="assets/images/check_input.svg"
+                        alt="check"
+                        class="sender_info_check"
+                      />
+                    </div>
+                    <div class="sender_info_row">
+                      <input
+                        type="number"
+                        name="sender_kpp"
+                        placeholder="КПП"
+                        class="sender_info_input"
+                      />
+                      <img
+                        src="assets/images/check_input.svg"
+                        alt="check"
+                        class="sender_info_check"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="quiz_item">
+                  <div class="sender_info">
+                    <div class="sender_info_row">
+                      <input
+                        type="number"
+                        name="ogrn"
+                        placeholder="ОГРН"
+                        class="sender_info_input"
+                      />
+                      <img
+                        src="assets/images/check_input.svg"
+                        alt="check"
+                        class="sender_info_check"
+                      />
+                    </div>
+
+                    <div class="sender_info_row">
+                      <input
+                        type="number"
+                        name="okpo"
+                        placeholder="ОКПО"
+                        class="sender_info_input"
+                      />
+                      <img
+                        src="assets/images/check_input.svg"
+                        alt="check"
+                        class="sender_info_check"
+                      />
+                    </div>
+
+                    <div class="sender_info_row">
+                      <input
+                        type="number"
+                        name="checking_account"
+                        placeholder="Расчётный счёт"
+                        class="sender_info_input"
+                      />
+                      <img
+                        src="assets/images/check_input.svg"
+                        alt="check"
+                        class="sender_info_check"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="quiz_item">
+                  <div class="sender_info">
+                    <div class="sender_info_row">
+                      <input
+                        type="number"
+                        name="okved"
+                        placeholder="ОКВЭД"
+                        class="sender_info_input"
+                      />
+                      <img
+                        src="assets/images/check_input.svg"
+                        alt="check"
+                        class="sender_info_check"
+                      />
+                    </div>
+
+                    <div class="sender_info_row">
+                      <input
+                        type="number"
+                        name="okato"
+                        placeholder="ОКАТО"
+                        class="sender_info_input"
+                      />
+                      <img
+                        src="assets/images/check_input.svg"
+                        alt="check"
+                        class="sender_info_check"
+                      />
+                    </div>
+
+                    <div class="sender_info_row">
+                      <input
+                        type="number"
+                        name="bik"
+                        placeholder="БИК:"
+                        class="sender_info_input"
+                      />
+                      <img
+                        src="assets/images/check_input.svg"
+                        alt="check"
+                        class="sender_info_check"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="profile_bottom">
+                  <button type="button" class="profile_btn next">Далее</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="company_block">
+              <div class="company_header">
+                <h3 class="component_title">
+                  ООО "ТехСнабПроект"
+                  <span style="color: #777; font-size: 13px"
+                    >(работает с НДС)</span
+                  >
+                </h3>
+                <a href="#" class="company_edit">
+                  <img src="assets/images/info_icon.svg" alt="" />
+                  <span>Изменить информацию</span>
+                  <img src="assets/images/edit_icon.svg" alt="" />
+                </a>
+              </div>
+              <div class="company_content">
+                <div class="company_info">
+                  <p>
+                    <strong>Юридический адрес:</strong>
+                    <span
+                      >350000, г. Краснодар, ул. Коммунаров, д. 45, офис
+                      301</span
+                    >
+                  </p>
+                  <p>
+                    <strong>Фактический адрес:</strong>
+                    <span>
+                      350010, г. Краснодар, ул. Тургенева, д. 101, офис
+                      204</span
+                    >
+                  </p>
+                  <p>
+                    <strong>Корр. счёт:</strong
+                    ><span>30101810100000000700</span>
+                  </p>
+                  <p>
+                    <strong>Расс. счёт:</strong>
+                    <span>40702810123456789012</span>
+                  </p>
+                  <p><strong>ИНН:</strong> <span>2310076543</span></p>
+                  <p><strong>КПП:</strong> <span>231001001</span></p>
+                  <p><strong>ОГРН:</strong> <span>11523010004567</span></p>
+                  <p><strong>ОКПО:</strong> <span>12345678</span></p>
+                  <p>
+                    <strong>ОКВЭД:</strong>
+                    <span
+                      >46.69 — Торговля оптовая прочими машинами и
+                      оборудованием</span
+                    >
+                  </p>
+                  <p><strong>ОКАТО:</strong> <span>28.03.2024</span></p>
+                  <p><strong>БИК:</strong><span>040349700</span></p>
+                </div>
+                <div class="contacts">
+                  <h3 class="component_title">Контактные лица</h3>
+                  <ul>
+                    <li>
+                      Петрова Елена Андреевна<br />
+                      Телефон: +7 (918) 765-43-21<br />
+                      Email: e.petrova@techsnab.ru
+                    </li>
+                    <li>
+                      Иванов Сергей Петрович <br />
+                      Телефон: +7 (918) 123-45-67<br />
+                      Email: s.ivanov@techsnab.ru
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <ul>
+            <li><a href="#">Форма обратной связи</a></li>
+            <li><a href="#">Вопросы и ответы</a></li>
+          </ul>
+          <a href="#" class="footer_subtitle"> Пользовательское соглашение </a>
+        </div>
+      </footer>
+    </div>
+    <!-- Register Modal -->
+    <div class="modal" id="register_modal">
+      <form class="modal_content">
+        <div class="close_btn" id="close_register">✕</div>
+        <h2 class="modal_title">Регистрация</h2>
+        <p class="modal_subtitle">
+          Введите адрес электронной почты и придумайте пароль
+        </p>
+        <input
+          type="text"
+          placeholder="Почта или телефон"
+          class="modal_input"
+          name="login_create"
+        />
+        <div class="password_field">
+          <input
+            type="password"
+            placeholder="Пароль"
+            class="modal_input password"
+            id="register_password"
+            name="password_create"
+          />
+          <span class="toggle_eye">
+            <img src="assets/images/eye.svg" alt="" />
+            <img src="assets/images/eye_close.svg" alt="" />
+          </span>
+        </div>
+        <button class="btn" type="disabled">Зарегистрироваться</button>
+        <div class="modal_links">
+          <a href="#" id="open_login">Войти</a>
+          <a href="#">Забыли пароль?</a>
+        </div>
+        <ul class="password_rules">
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 
+            24"
+              fill="none"
+            >
+              <path
+                d="M9 12L11 14L15 10M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                stroke="#E56E55"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+            ><span>Только латинские символы</span>
+          </li>
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 
+            24"
+              fill="none"
+            >
+              <path
+                d="M9 12L11 14L15 10M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                stroke="#E56E55"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+            ><span> Не менее 8 символов</span>
+          </li>
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 
+            24"
+              fill="none"
+            >
+              <path
+                d="M9 12L11 14L15 10M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                stroke="#E56E55"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+            ><span>1 цифру и 1 спецсимвол</span>
+          </li>
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 
+            24"
+              fill="none"
+            >
+              <path
+                d="M9 12L11 14L15 10M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                stroke="#E56E55"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+            ><span> 1 прописную и 1 строчную букву</span>
+          </li>
+        </ul>
+      </form>
+    </div>
+    <!-- login -->
+    <div class="modal" id="login_modal">
+      <form class="modal_content">
+        <div class="close_btn" id="close_register">✕</div>
+        <h2 class="modal_title">Вход в личный кабинет</h2>
+        <p class="modal_subtitle">
+          Ваш персональный инструмент для управления логистикой
+        </p>
+        <input
+          type="text"
+          placeholder="Почта или телефон"
+          class="modal_input"
+          name="login"
+        />
+        <div class="password_field">
+          <input
+            type="password"
+            placeholder="Пароль"
+            class="modal_input password"
+            id="register_password2"
+          />
+          <span class="toggle_eye">
+            <img src="assets/images/eye.svg" alt="" />
+            <img src="assets/images/eye_close.svg" alt="" />
+          </span>
+        </div>
+        <button class="btn" type="disabled">Зарегистрироваться</button>
+        <div class="modal_links">
+          <a href="#" class="register_oen">Регистрация</a>
+          <a href="#">Забыли пароль?</a>
+        </div>
+      </form>
+    </div>
+    <div class="modal contact_edit" id="edit">
+      <form class="modal_content">
+        <div class="close_btn" id="close_register">✕</div>
+        <h2 class="modal_title">Редактировать данные</h2>
+        <div class="modal_lists">
+          <input
+            type="text"
+            placeholder="Склад № 1"
+            class="modal_input"
+            name="first_name_user"
+          />
+          <div class="select-wrapper">
+            <select name="status_contact" class="custom-select">
+              <option value="">Пункт погрузки</option>
+              <option value="active">Пункт 1</option>
+              <option value="inactive">Пункт 2</option>
+            </select>
+            <img src="assets/images/arrow_down_select.svg" alt="Down arrow" />
+          </div>
+          <input
+            type="text"
+            placeholder="Склад № 1"
+            class="modal_input"
+            name="tour_names"
+          />
+          <input
+            type="tel"
+            placeholder="+7 (900) 123-45-67"
+            class="modal_input"
+            name="phone_input"
+          />
+          <input
+            type="email"
+            placeholder="i.petrov@logtrans.ru"
+            name="tour_email"
+          />
+          <input
+            type="text"
+            placeholder="Вопросы по загрузке только с 08:00 до 17:00"
+            name="time_comment"
+          />
+        </div>
+        <div class="modal_btns">
+          <button class="btn otmen">Отмена</button>
+          <button class="btn">Сохранить</button>
+        </div>
+      </form>
+    </div>
+    <div class="modal contact_add" id="add_adress">
+      <form class="modal_content">
+        <div class="close_btn" id="close_register">✕</div>
+        <h2 class="modal_title">Добавить контактное лицо</h2>
+        <p class="modal_subtitle">
+          Добавьте контактное лицо, чтобы ускорить взаимодействие и уточнение
+          деталей доставки.
+        </p>
+        <div class="modal_lists">
+          <input
+            type="text"
+            placeholder="ФИО"
+            class="modal_input"
+            name="first_name"
+          />
+          <div class="select-wrapper">
+            <select name="status_item" class="custom-select">
+              <option value="Должность">Должность</option>
+              <option value="active">Пункт 1</option>
+              <option value="inactive">Пункт 2</option>
+            </select>
+            <img src="assets/images/arrow_down_select.svg" alt="Down arrow" />
+          </div>
+          <input
+            type="text"
+            placeholder="Название объекта"
+            class="modal_input"
+            name="name_object"
+          />
+          <input
+            type="tel"
+            placeholder="Телефон"
+            class="modal_input"
+            name="phone"
+          />
+          <input type="email" placeholder="Почта" name="email" />
+          <input
+            type="text"
+            placeholder="Короткий коммертарий"
+            name="commert"
+          />
+        </div>
+        <div class="modal_btns">
+          <button class="btn otmen">Отмена</button>
+          <button class="btn">Сохранить</button>
+        </div>
+      </form>
+    </div>
+    <div class="modal" id="delete">
+      <form class="modal_content">
+        <h2 class="modal_title">Удалить контактное лицо?</h2>
+        <p class="modal_subtitle">
+          Контактные лица помогают быстрее заполнять заявки. Если вы удалите
+          этот контакт, он будет безвозвратно удалён из справочника.
+        </p>
+        <p class="modal_sm_title">
+          Если этот человек ещё работает с отправлениями, убедитесь, что у вас
+          есть его данные перед удалением.
+        </p>
+        <div class="modal_btns">
+          <button class="btn otmen">Отмена</button>
+          <button class="btn">Удалить контакт</button>
+        </div>
+      </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
+    <script src="assets/js/pro.js"></script>
+  </body>
+</html>
