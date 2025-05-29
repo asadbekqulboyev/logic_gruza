@@ -1790,7 +1790,7 @@
     padding: 6px 10px;
   }
 }
-.profile_info .quiz_progress .quiz_progress_btn.active ~ .progress_dots {
+.profile_info .quiz_progress .progress_dots.active {
   border-color: #e56e55;
 }
 .profile_info .quiz_progress .btn {

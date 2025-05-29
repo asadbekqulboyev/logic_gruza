@@ -126,7 +126,7 @@
           padding: 6px 10px;
         }
       }
-      .quiz_progress_btn.active ~ .progress_dots {
+      .progress_dots.active {
         border-color: #e56e55;
       }
       .btn {
