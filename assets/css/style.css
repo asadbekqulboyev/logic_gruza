@@ -1277,14 +1277,21 @@
   padding: 24px 30px;
   margin-top: 24px;
 }
+@media (max-width: 992px) {
+  .order_top {
+    align-items: flex-start;
+  }
+  .order_top br {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   .order_top {
     padding: 14px 16px;
     font-size: 12px;
+    flex-direction: column;
     margin-top: 16px;
-  }
-  .order_top br {
-    display: none;
+    gap: 20px;
   }
 }
 .order_top_btns {
@@ -1323,12 +1330,24 @@
 @media (max-width: 768px) {
   .order_content {
     padding: 14px 16px;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  .order_content .order_table_content {
+    gap: 20px;
+    flex-direction: column;
   }
 }
 .order_content .filters {
   display: flex;
   gap: 16px;
   margin-top: 20px;
+}
+@media (max-width: 768px) {
+  .order_content .filters {
+    flex-direction: column;
+  }
 }
 .order_content .filters .header_menu_btnlists {
   flex: 0 0 auto;
@@ -1401,11 +1420,22 @@
   height: 24px;
   pointer-events: none;
 }
+@media (max-width: 768px) {
+  .order_content_left {
+    flex-wrap: wrap;
+    gap: 20px !important;
+  }
+}
 .order_table_items {
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin-top: 30px;
+}
+@media (max-width: 768px) {
+  .order_table_items {
+    flex-wrap: wrap;
+  }
 }
 .order_table_item {
   padding: 16px 20px;
