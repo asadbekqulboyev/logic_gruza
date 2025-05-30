@@ -28,6 +28,15 @@
         }
       }
     }
+    .form_top {
+      & > a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #e56e55;
+        margin-top: 12px;
+      }
+    }
     .form_subtitle {
       margin-top: 16px;
       @media (max-width: 768px) {
@@ -58,6 +67,28 @@
           width: calc(50% - 8px);
           @media (max-width: 768px) {
             width: 100%;
+          }
+        }
+      }
+      &.only_search {
+        label {
+          width: calc(50% - 8px);
+          position: relative;
+          @media (max-width: 768px) {
+            width: 100%;
+          }
+          input {
+            width: 100%;
+            padding-left: 44px;
+          }
+          img {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            z-index: 2;
           }
         }
       }
@@ -241,6 +272,23 @@
       }
       .cargo_info_block {
         margin-top: 40px;
+        &.info_search {
+          .cargo_info_inputs {
+            .cargo_info_input {
+              position: relative;
+              .search_icon {
+                position: absolute;
+                left: 12px;
+                top: 27px;
+                transform: translateY(-50%);
+              }
+              input {
+                width: 100%;
+                padding-left: 40px;
+              }
+            }
+          }
+        }
       }
       .cargo_info_inputs {
         display: flex;

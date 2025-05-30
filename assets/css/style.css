@@ -443,6 +443,13 @@
     width: 19px;
   }
 }
+.main .form_section .form_top > a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #e56e55;
+  margin-top: 12px;
+}
 .main .form_section .form_subtitle {
   margin-top: 16px;
 }
@@ -484,6 +491,28 @@
   .main .form_section .form_inputs.only_select .select-wrapper {
     width: 100%;
   }
+}
+.main .form_section .form_inputs.only_search label {
+  width: calc(50% - 8px);
+  position: relative;
+}
+@media (max-width: 768px) {
+  .main .form_section .form_inputs.only_search label {
+    width: 100%;
+  }
+}
+.main .form_section .form_inputs.only_search label input {
+  width: 100%;
+  padding-left: 44px;
+}
+.main .form_section .form_inputs.only_search label img {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  z-index: 2;
 }
 .main .form_section .form_inputs.grid {
   flex-wrap: wrap;
@@ -673,6 +702,19 @@
 }
 .main .form_section .tourfirm_tab .cargo_info_block {
   margin-top: 40px;
+}
+.main .form_section .tourfirm_tab .cargo_info_block.info_search .cargo_info_inputs .cargo_info_input {
+  position: relative;
+}
+.main .form_section .tourfirm_tab .cargo_info_block.info_search .cargo_info_inputs .cargo_info_input .search_icon {
+  position: absolute;
+  left: 12px;
+  top: 27px;
+  transform: translateY(-50%);
+}
+.main .form_section .tourfirm_tab .cargo_info_block.info_search .cargo_info_inputs .cargo_info_input input {
+  width: 100%;
+  padding-left: 40px;
 }
 .main .form_section .tourfirm_tab .cargo_info_inputs {
   display: flex;
