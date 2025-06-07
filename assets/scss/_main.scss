@@ -534,6 +534,9 @@
         span:last-child {
           color: #e56e55;
         }
+        @media (max-width: 1200px) {
+          font-size: 14px;
+        }
         @media (max-width: 556px) {
           font-size: 12px;
           gap: 8px;
@@ -573,6 +576,7 @@
   }
   .sidebar {
     width: 100%;
+    min-width: 365px;
     max-width: 400px;
     border-radius: 2px;
     background: #fff;
@@ -664,6 +668,7 @@
           border: 0;
           outline: 0;
           background: transparent;
+          width: 100%;
         }
       }
     }

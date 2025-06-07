@@ -355,4 +355,7 @@ $(document).ready(function () {
     e.preventDefault();
     // Yoki AJAX yuborish logikasi shu yerga yoziladi
   });
+  if ($(".filters select.nice").length > 0) {
+    $(".filters select.nice").niceSelect();
+  }
 });

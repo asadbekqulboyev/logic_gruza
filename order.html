@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Логика Груза</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.css"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
@@ -135,17 +139,20 @@
               <div class="order_table">
                 <div class="filters">
                   <div class="select-wrapper">
-                    <select name="status" class="custom-select">
+                    <select name="status" class="custom-select nice">
                       <option value="">Статус</option>
-                      <option value="active">Активный</option>
-                      <option value="inactive">Неактивный</option>
+                      <option value="Ожидает расчета">Ожидает расчета</option>
+                      <option value="Рассчитано">Рассчитано</option>
+                      <option value="Ожидает погрузки">Ожидает погрузки</option>
+                      <option value="В пути">В пути</option>
+                      <option value="Доставлен">Доставлен</option>
+                      -
                     </select>
                     <img
                       src="assets/images/arrow_down_select.svg"
                       alt="Down arrow"
                     />
                   </div>
-
                   <div class="select-wrapper">
                     <select name="date" class="custom-select">
                       <option value="">Дата создания</option>
@@ -169,12 +176,14 @@
                       alt="Down arrow"
                     />
                   </div>
-
                   <div class="select-wrapper">
-                    <select name="type" class="custom-select">
+                    <select name="type" class="custom-select nice">
                       <option value="">Тип</option>
-                      <option value="cargo">Груз</option>
-                      <option value="passenger">Пассажир</option>
+                      <option value="Еврофура">Еврофура</option>
+                      <option value="Прямая машина">Прямая машина</option>
+                      <option value="Сборный груз">Сборный груз</option>
+                      <option value="Контейнер">Контейнер</option>
+                      <option value="Негабарит">Негабарит</option>
                     </select>
                     <img
                       src="assets/images/arrow_down_select.svg"
@@ -548,6 +557,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/pro.js"></script>
   </body>
 </html>
