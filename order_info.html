@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Логика Груза</title>
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.css"
-  />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
@@ -153,18 +158,37 @@
                       alt="Down arrow"
                     />
                   </div>
-                  <div class="select-wrapper">
-                    <select name="date" class="custom-select" placeholder="Дата создания">
-                      <option value="">Дата создания</option>
-                      <option value="newest">Самая новая</option>
-                      <option value="oldest">Самая старая</option>
-                    </select>
+                  <div class="select-wrapper date_range">
+                    <span class="custom-select" id="date_range_text"
+                      >Дата создания</span
+                    >
                     <img
                       src="assets/images/arrow_down_select.svg"
                       alt="Down arrow"
                     />
+                    <div class="date_picker_popup" style="display: none">
+                      <label>Выберите период</label>
+                      <label class="label_item">
+                        <span>С</span>
+                        <input
+                          type="text"
+                          id="start_date"
+                          placeholder="дд/мм/гг"
+                          readonly
+                        />
+                      </label>
+                      <span class="divider">|</span>
+                      <label class="label_item">
+                        <span> По </span>
+                        <input
+                          type="text"
+                          id="end_date"
+                          placeholder="дд/мм/гг"
+                          readonly
+                        />
+                      </label>
+                    </div>
                   </div>
-
                   <div class="select-wrapper">
                     <select name="city" class="custom-select">
                       <option value="">Город</option>
@@ -557,6 +581,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/pro.js"></script>
   </body>
 </html>

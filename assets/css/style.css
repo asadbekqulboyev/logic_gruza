@@ -337,6 +337,7 @@
     left: auto;
     right: -100%;
     padding: 30px 16px;
+    overflow-y: auto;
   }
 }
 .header_mobile.open {
@@ -377,6 +378,11 @@
   gap: 16px;
   height: calc(100% - 405px);
   justify-content: flex-end;
+}
+@media (max-height: 632px) {
+  .header_mobile_bottom {
+    height: fit-content;
+  }
 }
 .header_mobile_bottom a {
   color: #e56e55;
@@ -420,7 +426,7 @@
   display: flex;
   gap: 16px;
 }
-@media (max-width: 992px) {
+@media (max-width: 1060px) {
   .main .container {
     flex-direction: column;
     gap: 30px;
@@ -602,6 +608,11 @@
   margin-top: 16px;
   flex-wrap: wrap;
 }
+@media (max-width: 768px) {
+  .main .form_section .tourfirm_tab .tourfirm_tab_btns {
+    background: #e7e7e7;
+  }
+}
 .main .form_section .tourfirm_tab .tourfirm_tab_btns > .tourfirm_tab_btn {
   width: fit-content;
   flex: 0 0 auto;
@@ -619,6 +630,19 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+@media (max-width: 1190px) {
+  .main .form_section .tourfirm_tab .tourfirm_tab_btns > .tourfirm_tab_btn .tourfirm_tab_btn_content {
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .main .form_section .tourfirm_tab .tourfirm_tab_btns > .tourfirm_tab_btn .tourfirm_tab_btn_content {
+    background: #f6f6f6;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 400;
+  }
 }
 .main .form_section .tourfirm_tab .tourfirm_tab_btns > .tourfirm_tab_btn input:checked + .tourfirm_tab_btn_content {
   background: #fff;
@@ -1320,6 +1344,56 @@
   padding: 8px 30px;
   font-size: 16px;
   color: #e56e55;
+}
+.main .date_picker_popup {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  background: #fff;
+  padding: 20px;
+  margin-top: 5px;
+  width: 100%;
+  border-radius: 4px;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0px 6px 24.3px 0px rgba(178, 178, 178, 0.25);
+}
+.main .date_picker_popup .divider {
+  text-align: center;
+  width: 100%;
+  display: block;
+  color: #e56e55;
+  height: fit-content;
+}
+.main .date_picker_popup > label {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  color: #262626;
+  display: block;
+  margin-bottom: 12px;
+}
+.main .date_picker_popup .label_item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  color: #262626;
+  border-radius: 2px;
+  border: 1px solid #d1d1d1;
+  background: #fff;
+  display: flex;
+  padding: 8px 12px;
+  align-items: center;
+  margin-bottom: 0;
+}
+.main .date_picker_popup .label_item input {
+  outline: 0;
+  border: 0;
 }
 
 .order {

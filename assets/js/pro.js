@@ -358,4 +358,58 @@ $(document).ready(function () {
   if ($(".filters select.nice").length > 0) {
     $(".filters select.nice").niceSelect();
   }
+  function datePick() {
+    // Sana tanlash funksiyasi
+    $("#start_date").datepicker({
+      dateFormat: "dd/mm/yy",
+      onSelect: function () {
+        let minDate = $(this).datepicker("getDate");
+        $("#end_date").datepicker("option", "minDate", minDate);
+        updateDateText();
+      },
+    });
+
+    $("#end_date").datepicker({
+      dateFormat: "dd/mm/yy",
+      onSelect: function () {
+        let maxDate = $(this).datepicker("getDate");
+        $("#start_date").datepicker("option", "maxDate", maxDate);
+        updateDateText();
+      },
+    });
+
+    // Ochish/tugatish
+    $(".date_range .custom-select, .select-wrapper.date_range img").on(
+      "click",
+      function (e) {
+        $(".date_picker_popup").toggle();
+        e.stopPropagation();
+      }
+    );
+
+    // Tashqariga bosilganda yopish (lekin datepicker yoki popup ichida bosilsa yopilmaydi)
+    $(document).on("click", function (e) {
+      if (
+        !$(e.target).closest(".date_picker_popup").length &&
+        !$(e.target).closest(".ui-datepicker").length
+      ) {
+        $(".date_picker_popup").hide();
+      }
+    });
+
+    // Popup va datepicker bosilganda yopilmasligi uchun
+    $(".date_picker_popup").on("click", function (e) {
+      e.stopPropagation();
+    });
+
+    // Matnni yangilash
+    function updateDateText() {
+      let start = $("#start_date").val();
+      let end = $("#end_date").val();
+      if (start && end) {
+        $("#date_range_text").text(`${start} - ${end}`);
+      }
+    }
+  }
+  datePick();
 });
