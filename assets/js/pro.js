@@ -458,5 +458,5 @@ $(document).ready(function () {
   $(document).ready(function () {
     setupCitySelect();
   });
-  $(".den_select").niceSelect();
+  $("#page_count").niceSelect();
 });
