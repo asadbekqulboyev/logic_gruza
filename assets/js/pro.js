@@ -8,6 +8,20 @@ $(document).ready(function () {
     }
   });
   //modal
+  $(".header_accaount").click(function (e) {
+    e.preventDefault();
+    $(".modal#register_modal").fadeIn();
+  });
+  $("#open_login").click(function (e) {
+    e.preventDefault();
+    $(".modal#register_modal").fadeOut();
+    $(".modal#login_modal").fadeIn();
+  });
+  $(".register_oen").click(function (e) {
+    e.preventDefault();
+    $(".modal#login_modal").fadeOut();
+    $(".modal#register_modal").fadeIn();
+  });
   $("#register_password").on("input", function () {
     const val = $(this).val();
     const $form = $(this).closest("form");

@@ -890,6 +890,10 @@
       background-color: #fdf5f3; // very light pink background
       padding: 20px;
       border-radius: 8px;
+      @media (max-width: 556px) {
+        padding: 10px 8px;
+        gap: 16px 8px;
+      }
       &_item {
         width: calc(50% - 8px);
       }
@@ -903,14 +907,33 @@
     &_label {
       font-size: 14px;
       color: #727272;
+
+      @media (max-width: 556px) {
+        font-size: 12px;
+      }
     }
 
     &_text {
       font-size: 16px;
       font-weight: 600;
       color: #262626;
+      @media (max-width: 768px) {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: normal;
+      }
+      @media (max-width: 556px) {
+        font-size: 11px;
+      }
       strong {
         font-weight: 600;
+        @media (max-width: 768px) {
+          font-size: 13px;
+          font-weight: 500;
+        }
+        @media (max-width: 556px) {
+          font-size: 11px;
+        }
       }
     }
   }
