@@ -177,16 +177,57 @@
                       </label>
                     </div>
                   </div>
-                  <div class="select-wrapper">
-                    <select name="city" class="custom-select">
-                      <option value="">Город</option>
-                      <option value="moscow">Москва</option>
-                      <option value="spb">Санкт-Петербург</option>
-                    </select>
+                  <div class="select-wrapper city">
+                    <!-- Input va ochuvchi ikonka -->
+                    <input
+                      type="text"
+                      placeholder="Город"
+                      name="citys"
+                      class="custom-select city_search"
+                      readonly
+                    />
                     <img
                       src="assets/images/arrow_down_select.svg"
                       alt="Down arrow"
+                      class="dropdown_toggle"
                     />
+
+                    <div class="city_list">
+                      <input
+                        type="text"
+                        placeholder="Поиск"
+                        class="city_search search_input"
+                        name="search"
+                      />
+                      <label>
+                        <input type="checkbox" value="Москва" />
+                        <span class="custom_checkbox"
+                          ><span class="checkmark"></span
+                        ></span>
+                        Москва
+                      </label>
+                      <label>
+                        <input type="checkbox" value="Санкт-Петербург" />
+                        <span class="custom_checkbox"
+                          ><span class="checkmark"></span
+                        ></span>
+                        Санкт-Петербург
+                      </label>
+                      <label>
+                        <input type="checkbox" value="Казань" />
+                        <span class="custom_checkbox"
+                          ><span class="checkmark"></span
+                        ></span>
+                        Казань
+                      </label>
+                      <label>
+                        <input type="checkbox" value="Челябинск" />
+                        <span class="custom_checkbox"
+                          ><span class="checkmark"></span
+                        ></span>
+                        Челябинск
+                      </label>
+                    </div>
                   </div>
                   <div class="select-wrapper">
                     <select name="type" class="custom-select nice">
@@ -203,7 +244,6 @@
                     />
                   </div>
                 </div>
-
                 <div class="order_table_items">
                   <div class="order_table_item">
                     <div class="order_table_content">

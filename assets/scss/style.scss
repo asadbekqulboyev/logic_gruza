@@ -300,9 +300,6 @@ input[type="number"]::-webkit-outer-spin-button {
     transition: 0.2s ease;
   }
 
-  input {
-    // agar kerak bo‘lsa inputga style
-  }
 
   input:focus + .fake_placeholder,
   input:not(:placeholder-shown) + .fake_placeholder {

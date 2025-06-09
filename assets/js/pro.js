@@ -412,4 +412,51 @@ $(document).ready(function () {
     }
   }
   datePick();
+  function setupCitySelect() {
+    const $wrapper = $(".select-wrapper.city");
+    const $readonlyInput = $wrapper.find(".custom-select.city_search");
+    const $searchInput = $wrapper.find(".search_input");
+    const $dropdown = $wrapper.find(".city_list");
+    const $checkboxes = $wrapper.find('input[type="checkbox"]');
+    const $labels = $wrapper.find("label");
+
+    // ✅ INPUT bosilganda ochiladi
+    $readonlyInput.on("click", function (e) {
+      e.stopPropagation();
+      $dropdown.toggle();
+    });
+
+    // 🔍 Qidiruv funksiyasi
+    $searchInput.on("input", function () {
+      const search = $(this).val().toLowerCase();
+      $labels.each(function () {
+        const labelText = $(this).text().toLowerCase();
+        $(this).toggle(labelText.includes(search));
+      });
+    });
+
+    // ✅ Tanlanganlar inputga yoziladi
+    $checkboxes.on("change", function () {
+      const selected = $checkboxes
+        .filter(":checked")
+        .map(function () {
+          return this.value;
+        })
+        .get()
+        .join(", ");
+      $readonlyInput.val(selected);
+    });
+
+    // ❌ Tashqariga bosilganda dropdown yopiladi
+    $(document).on("click", function (e) {
+      if (!$wrapper.is(e.target) && $wrapper.has(e.target).length === 0) {
+        $dropdown.hide();
+      }
+    });
+  }
+
+  $(document).ready(function () {
+    setupCitySelect();
+  });
+  $(".den_select").niceSelect();
 });
